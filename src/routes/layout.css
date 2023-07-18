@@ -4,7 +4,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 10rem;
+  height: 6rem;
   background-color: #fff;
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -17,8 +17,26 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 10rem;
+  height: 6rem;
   background-color: #fff;
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.menu{
+  color: #8f5a5a;
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+/* on hover enlarge */
+.menu:hover{
+  transform: scale(1.1);
+}
+
+.menu-list{
+  background-color: #fff;
 }

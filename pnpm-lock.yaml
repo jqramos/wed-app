@@ -4,24 +4,26 @@ specifiers:
   '@sveltejs/adapter-vercel': ^3.0.2
   '@sveltejs/vite-plugin-svelte': ^2.4.2
   '@tsconfig/svelte': ^5.0.0
-  feather-icons: ^4.29.0
+  kit-monorepo: github:sveltejs/kit
   svelte: ^4.0.3
   svelte-check: ^3.4.4
+  svelte-feather-icons: ^4.0.1
   tailwind: ^4.0.0
   tslib: ^2.6.0
   typescript: ^5.0.2
   vite: ^4.4.0
 
 dependencies:
-  feather-icons: 4.29.0
   tailwind: 4.0.0
 
 devDependencies:
   '@sveltejs/adapter-vercel': 3.0.2
   '@sveltejs/vite-plugin-svelte': 2.4.2_svelte@4.0.5+vite@4.4.4
   '@tsconfig/svelte': 5.0.0
+  kit-monorepo: github.com/sveltejs/kit/2f2ef5ff10a4f3257b65b33047fcf2521beb6c14
   svelte: 4.0.5
   svelte-check: 3.4.6_svelte@4.0.5
+  svelte-feather-icons: 4.0.1
   tslib: 2.6.0
   typescript: 5.1.6
   vite: 4.4.4
@@ -697,10 +699,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /classnames/2.3.2:
-    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
-    dev: false
-
   /code-red/1.0.3:
     resolution: {integrity: sha512-kVwJELqiILQyG5aeuyKFbdsI1fmQy1Cmf7dQ8eGmVuJoaRVdwey7WaMknr2ZFeVSYSKT0rExsa8EGw0aoI/1QQ==}
     dependencies:
@@ -790,11 +788,6 @@ packages:
   /core-js/2.6.12:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
-    requiresBuild: true
-    dev: false
-
-  /core-js/3.31.1:
-    resolution: {integrity: sha512-2sKLtfq1eFST7l7v62zaqXacPc7uG8ZAya8ogijLhTtaKNcpzpB4TMoTw2Si+8GYKRwFPMMtUT0263QFWFfqyQ==}
     requiresBuild: true
     dev: false
 
@@ -1114,13 +1107,6 @@ packages:
     dependencies:
       reusify: 1.0.4
     dev: true
-
-  /feather-icons/4.29.0:
-    resolution: {integrity: sha512-Y7VqN9FYb8KdaSF0qD1081HCkm0v4Eq/fpfQYQnubpqi0hXx14k+gF9iqtRys1SIcTEi97xDi/fmsPFZ8xo0GQ==}
-    dependencies:
-      classnames: 2.3.2
-      core-js: 3.31.1
-    dev: false
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
@@ -2371,6 +2357,12 @@ packages:
       - sugarss
     dev: true
 
+  /svelte-feather-icons/4.0.1:
+    resolution: {integrity: sha512-DMDrlbblaRUHLcTFtKHE4GWQ/Fk/kneGIZrrI75EmTxCu1hgHe8uq8e80ONrmdjL/i3f1d8fkcx73SWng2X6Gg==}
+    dependencies:
+      svelte: 3.59.2
+    dev: true
+
   /svelte-hmr/0.15.2_svelte@4.0.5:
     resolution: {integrity: sha512-q/bAruCvFLwvNbeE1x3n37TYFb3mTBJ6TrCq6p2CoFbSTNhDE9oAtEfpy+wmc9So8AG0Tja+X0/mJzX9tSfvIg==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
@@ -2425,6 +2417,11 @@ packages:
       strip-indent: 3.0.0
       svelte: 4.0.5
       typescript: 5.1.6
+    dev: true
+
+  /svelte/3.59.2:
+    resolution: {integrity: sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==}
+    engines: {node: '>= 8'}
     dev: true
 
   /svelte/4.0.5:
@@ -2744,4 +2741,11 @@ packages:
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
+    dev: true
+
+  github.com/sveltejs/kit/2f2ef5ff10a4f3257b65b33047fcf2521beb6c14:
+    resolution: {tarball: https://codeload.github.com/sveltejs/kit/tar.gz/2f2ef5ff10a4f3257b65b33047fcf2521beb6c14}
+    name: kit-monorepo
+    version: 0.0.1
+    engines: {pnpm: ^8.0.0}
     dev: true

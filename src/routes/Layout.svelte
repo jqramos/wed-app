@@ -1,15 +1,29 @@
 
 
 <header>
-    <nav class="flex justify-between items-center">
-        <svg class="feather">
-            <use href="path/to/dist/feather-sprite.svg#circle"/>
-          </svg>
+    <nav class="">
+        <div class="menu">
+            <a href="/" on:click={toggle}>
+                <MenuIcon size="40" />
+            </a>
+        </div>
+        <!-- show menu on hover of icon -->
+        {#if isHovered}
+        <div class="menu-list columns-12">
+            <div class="w-full text-left">
+                <a href="/">Home</a>
+            </div>
+            <div class="w-full text-left">
+                <a href="/about">About</a>
+            </div>
+            <div class="w-full text-left">
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+        {/if}
     </nav>
 </header>
 <div>
-    asdasdsad
-
     <slot></slot>
 </div>
 
@@ -22,8 +36,15 @@
     import { onMount } from 'svelte';
     //import css
     import './layout.css';
+    import { MenuIcon} from 'svelte-feather-icons';
 
+    let isHovered = false;
     onMount(() => {
         console.log('mounted');
     });
+
+    function toggle() {
+        isHovered = !isHovered;
+        alert('clicked');
+    }
 </script>
