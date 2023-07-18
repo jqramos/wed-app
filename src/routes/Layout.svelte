@@ -1,50 +1,42 @@
 
 
 <header>
-    <nav class="">
-        <div class="menu">
-            <a href="/" on:click={toggle}>
-                <MenuIcon size="40" />
-            </a>
+    <nav class="nav">
+        <!-- make this a round floating menu -->
+        <div class="menu" 
+            on:click={() => { toggle(); }}>
+            <div class="flex">
+                <MenuIcon size="24" class="pt-1"/>
+                <span class="text-lg pl-3">Menu</span>
+            </div>
         </div>
         <!-- show menu on hover of icon -->
         {#if isHovered}
-        <div class="menu-list columns-12">
-            <div class="w-full text-left">
-                <a href="/">Home</a>
-            </div>
-            <div class="w-full text-left">
-                <a href="/about">About</a>
-            </div>
-            <div class="w-full text-left">
-                <a href="/contact">Contact</a>
-            </div>
-        </div>
+            <Sidebar/>
         {/if}
     </nav>
 </header>
-<div>
-    <slot></slot>
+<div class="h-screen w-full">
+    <HeadContent/>
 </div>
 
 
-<div>
-    <footer></footer>
-</div>
 
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount, setContext } from 'svelte';
     //import css
     import './layout.css';
     import { MenuIcon} from 'svelte-feather-icons';
+    import Sidebar  from '../lib/Sidebar.svelte';
+    import HeadContent from './content/HeadContent.svelte';
 
     let isHovered = false;
+    setContext('isHovered', {toggle});
     onMount(() => {
         console.log('mounted');
     });
 
     function toggle() {
         isHovered = !isHovered;
-        alert('clicked');
     }
 </script>

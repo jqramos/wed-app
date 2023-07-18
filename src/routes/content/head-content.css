@@ -1,0 +1,9 @@
+.main{
+    background-image: url("../../assets/main.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-origin: content-box;
+    height: 66%;
+    color: #faf3ee;
+}
