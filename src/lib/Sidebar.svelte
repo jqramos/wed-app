@@ -25,8 +25,7 @@ class="sidebar md:w-1/4 w-3/4  h-screen  left-0 top-0 z-10">
 
 <script lang="ts">
 
-    import { getContext } from 'svelte';
-    const { toggle } = getContext('isHovered');
+    
     import { XIcon } from 'svelte-feather-icons';
     import './sidebar.css';
     import { slide } from 'svelte/transition';

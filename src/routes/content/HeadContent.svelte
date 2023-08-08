@@ -128,6 +128,8 @@
                 break;
         }
         window.location.hash = `#${selectedContent}`;
+        //scroll a little bit
+        window.scrollTo(0, 100);
     }
 
     // compute duration before nov 24 2023 gm+8
