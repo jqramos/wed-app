@@ -11,13 +11,14 @@
             </div>
         </div>
         <!-- show menu on hover of icon -->
-        {#if isHovered}
-            <Sidebar/>
-        {/if}
     </nav>
 </header>
-<div class="h-screen w-full">
-    <HeadContent/>
+
+<div class="col-auto">
+        <Sidebar/>
+    <div class="h-screen w-full">
+        <HeadContent/>
+    </div>
 </div>
 
 
