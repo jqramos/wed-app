@@ -43,3 +43,13 @@ footer {
   align-items: center;
   @apply rounded-3xl shadow-lg bg-white fixed left-5 top-3 z-10 flex justify-center items-center cursor-pointer px-3 ;
 }
+
+.sidebar-dt {
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(219, 214, 192, 0.97);
+  box-shadow: rgba(172, 122, 14, 0.25) 0px 50px 100px, rgba(71, 61, 16, 0.3) 0px 30px 60px;
+}
+
+.content-all {
+  @apply bg-primary
+}

@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* declare bg primary as variable */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -8,7 +11,7 @@
 
   color-scheme: light dark;
   color: rgba(121, 80, 9, 1);
-  background-color: rgba(250, 248, 245, 1);
+  background-color: rgba(255, 255, 255, 0.97);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -77,4 +80,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+main {
+  @apply h-screen w-screen flex flex-col justify-center items-center;
 }

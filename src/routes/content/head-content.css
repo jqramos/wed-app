@@ -1,9 +1,50 @@
 .main{
-    background-image: url("../../assets/main.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    /* center background using parameter- */
+    background-position: center 20%;
     background-origin: content-box;
     height: 66%;
     color: #faf3ee;
+    position: relative;
+}
+
+.image-1{
+    background-image: url("../../assets/home.jpg");
+}
+.image-2{
+    background-image: url("../../assets/ArmidiaPhoto-191.jpg");
+}
+
+.curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.curve svg {
+    position: relative;
+    display: block;
+    width: calc(185% + 1.4px);
+    height: 159px;
+}
+
+.curve .shape-fill {
+    fill: theme('colors.primary');
+}
+
+.story {
+    @apply bg-primary
+}
+
+.title-bar{
+    top: 10vh
+}
+
+.menu-btn{
+    @apply bg-primary opacity-80 transition duration-150 ease-in-out hover:-translate-y-1 hover:opacity-100 bg-secondary;
 }
