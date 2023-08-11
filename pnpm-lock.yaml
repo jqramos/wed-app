@@ -19,6 +19,9 @@ dependencies:
     version: 5.6.1
 
 devDependencies:
+  '@sveltejs/adapter-static':
+    specifier: ^2.0.3
+    version: 2.0.3(@sveltejs/kit@1.22.3)
   '@sveltejs/adapter-vercel':
     specifier: ^3.0.2
     version: 3.0.2(@sveltejs/kit@1.22.3)
@@ -336,6 +339,14 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /@sveltejs/adapter-static@2.0.3(@sveltejs/kit@1.22.3):
+    resolution: {integrity: sha512-VUqTfXsxYGugCpMqQv1U0LIdbR3S5nBkMMDmpjGVJyM6Q2jHVMFtdWJCkeHMySc6mZxJ+0eZK3T7IgmUCDrcUQ==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.5.0
+    dependencies:
+      '@sveltejs/kit': 1.22.3(svelte@4.0.5)(vite@4.4.4)
     dev: true
 
   /@sveltejs/adapter-vercel@3.0.2(@sveltejs/kit@1.22.3):
