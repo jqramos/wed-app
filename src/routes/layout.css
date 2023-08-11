@@ -53,3 +53,7 @@ footer {
 .content-all {
   @apply bg-primary
 }
+
+.search-container {
+  min-width: 20vh;
+}

@@ -1,5 +1,5 @@
 <!-- full width div of browser -->
-<div class="main flex-col h-screen {bgClass}">
+<div class="main flex-col h-screen {bgClass}" transition:slide={{ delay: 250, duration: 500, easing: quintOut, axis: 'x' }} >
     <!-- center vertically -->
     <div class="flex flex-col justify-center items-center h-full title-bar" >
         <h1 class="md:text-8xl text-center cursive">Jayvee & Victoria</h1>
@@ -20,7 +20,7 @@
 </div>
 
 {#if selectedContent === 'home'}
-<div class="story h-auto">
+<div class="story h-auto" transition:fade={{ delay: 250, duration: 500, easing: quintOut }} >
     <!-- center contents -->
     <div class="p-10 flex flex-col justify-center items-center  text-center">        
         <p>
@@ -42,19 +42,19 @@
 {/if}
 
 {#if selectedContent === 'rsvp'}
-<div class="story h-auto">
+<div class="story h-auto" transition:fade={{ delay: 250, duration: 500, easing: quintOut}} >
     <Rsvp/>
 </div>
 {/if}
 
 {#if selectedContent === 'dress-code'}
-<div class="story h-auto">
+<div class="story h-auto" transition:fade={{ delay: 250, duration: 500, easing: quintOut }} >
     <Dresscode/>
 </div>
 {/if}
 
 {#if selectedContent === 'faqs'}
-<div class="story h-auto">
+<div class="story h-auto" transition:fade={{ delay: 250, duration: 500, easing: quintOut}} >
     <div class="p-10 flex flex-col justify-center items-center  text-center">    
         <!-- create layout for wedding faqs numbered list-->
 
@@ -81,6 +81,9 @@
     import { onMount } from 'svelte';
     import Rsvp from '../../lib/RSVP.svelte';
     import Dresscode from '../../lib/Dresscode.svelte';
+    import { slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
+    import { quintOut } from 'svelte/easing';
 
     let selectedContent = 'home';
     const weddingDate = new Date('November 24, 2023 00:00:00 GMT+08:00');
@@ -94,6 +97,16 @@
     ]
 
     let bgClass = 'image-1';
+    let bgList = [
+        'image-1',
+        'image-2',
+        'image-3',
+        'image-4',
+        'image-5',
+        'image-6',
+        'image-7',
+        'image-8',
+    ]
 
     onMount(() => {
         //show content based on hash
@@ -102,31 +115,23 @@
                 viewContentByIndex(index);
             }
         });
-        
+        transitionBackgroud();
     });
+    
+        //set interval to change background bgClass
+    function transitionBackgroud() {
+        setInterval(() => {
+            const index = bgList.indexOf(bgClass);
+            if (index === bgList.length - 1) {
+                bgClass = bgList[0];
+            } else {
+                bgClass = bgList[index + 1];
+            }
+        }, 5000);
+    }
 
     function viewContentByIndex(index: number) {
         selectedContent = contentList[index];
-        switch(index) {
-            case 0:
-                bgClass = 'image-1';
-                break;
-            case 1:
-                bgClass = 'image-2';
-                break;
-            case 2:
-                bgClass = 'image-3';
-                break;
-            case 3:
-                bgClass = 'image-4';
-                break;
-            case 4:
-                bgClass = 'image-2';
-                break;
-            case 5:
-                bgClass = 'image-6';
-                break;
-        }
         window.location.hash = `#${selectedContent}`;
         //scroll a little bit
         window.scrollTo(0, 100);
