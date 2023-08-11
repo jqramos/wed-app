@@ -9,6 +9,7 @@
     position: relative;
     -webkit-transition: background-image 0.9s ease-in-out;
     transition: background-image 0.9s ease-in-out;
+    image-rendering: optimizeSpeed;
 }
 
 .image-1{
