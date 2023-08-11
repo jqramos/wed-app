@@ -15,10 +15,10 @@
 <div class="story h-auto">
     <!-- position at bottom of this section -->
     <div class="justify-center pl-4 menu-btns flex  flex-wrap bottom-1/4 gap-10 mb-10">            
-        <a href="#" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(0); }}>Home</a>
-        <a href="#" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(3); }}>Dress Code</a>
-        <a href="#" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(4); }}>RSVP</a>
-        <a href="#" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(5); }}>FAQs</a>
+        <a href="#home" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(0); }}>Home</a>
+        <a href="#dress-code" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(3); }}>Dress Code</a>
+        <a href="#rsvp" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(4); }}>RSVP</a>
+        <a href="#faqs" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(5); }}>FAQs</a>
     </div>
 
     {#if selectedContent === 'home'}
@@ -59,6 +59,9 @@
                 <!-- reception schedule -->
                 <div class="mt-10">
                     <h1 class="text-4xl cursive font-extrabold">Reception</h1>
+                    <p class="text-xl">
+                        Plaza Guevarra
+                    </p>
                     <p class="text-xl">
                         5:00 PM - 10:00 PM
                     </p>
@@ -165,8 +168,8 @@
     function viewContentByIndex(index: number) {
         selectedContent = contentList[index];
         window.location.hash = `#${selectedContent}`;
-        //scroll to bottom
-        window.scrollTo(0, document.body.scrollHeight);
+        //scroll a little bit
+        window.scrollTo(0, 300);
     }
 
     // compute duration before nov 24 2023 gm+8
