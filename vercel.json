@@ -1,6 +1,6 @@
 {
     "rewrites": [
-        { "source": "/api/:match*", "destination": "https://young-thunder-1990.fly.dev/:match*" }
+        { "source": "/api/:match*", "destination": "https://young-thunder-1990.fly.dev/api/:match*" }
 
     ],
     "headers": [
