@@ -116,7 +116,7 @@
     import Dresscode from '../../lib/Dresscode.svelte';
     import { slide } from 'svelte/transition';
 	import { scale  } from 'svelte/transition';
-    import { cubicInOut } from 'svelte/easing';
+    import { cubicInOut, quintOut } from 'svelte/easing';
 
     let selectedContent = 'home';
     const weddingDate = new Date('November 24, 2023 00:00:00 GMT+08:00');
