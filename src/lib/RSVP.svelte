@@ -1,16 +1,16 @@
 
-<div class="p-10 flex flex-col justify-center items-center  text-center">    
+<div class="p-10 flex flex-col justify-center items-center  text-center" >    
     <!-- create layout for wedding faqs numbered list-->
 
-    <h1 class="text-4xl cursive font-extrabold">RSVP</h1>
+    <h1 class="text-5xl font-extrabold">RSVP</h1>
 
     <!-- create forms for attendess -->
     <div>
       {#if !isSubmitted}
-        <form class="w-full max-w-lg mt-10">
+        <form class="w-full max-w-lg mt-10" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full  px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                <label class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2" for="grid-state">
                   Guest Name
                 </label>
                 <div class="relative search-container">
@@ -36,14 +36,14 @@
 
               <!-- show message asking if going or not -->
               {#if selectedGuest && !isGoing}
-                  <div class="w-full text-center">
+                  <div class="w-full text-center mt-5" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
                     <p class="text-2xl">Are you going to attend the wedding?</p>
                     <div class="mt-2">
                       <!-- buttons to anser -->
                       <button on:click={() => isGoing = true} class="bg-secondary text-white font-bold py-2 px-4 rounded">
                         Yes
                       </button>
-                      <button on:click={() => isGoing = false} class="bg-secondary text-white font-bold py-2 px-4 rounded">
+                      <button on:click={() => sendNo()} class="bg-secondary text-white font-bold py-2 px-4 rounded">
                         No
                       </button>
                     </div>
@@ -51,8 +51,8 @@
                 {/if}
               
               {#if guestPlusOne > 0 && isGoing}
-              <div class="w-full  px-3 mb-6 md:mb-0 mt-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+              <div class="w-full  px-3 mb-6 md:mb-0 mt-3" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
+                <label class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2" for="grid-state">
                   Number of additional guest (only declared guest will have food)
                 </label>
                 <div class="relative">
@@ -74,8 +74,8 @@
               {#if selectedGuestNo > 0}
               {#each Array(selectedGuestNo) as _, i}
 
-              <div class="w-full md:w-ull px-3 mt-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+              <div class="w-full md:w-ull px-3 mt-3" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
+                <label class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2" for="grid-last-name">
                   Guest No {i+1} Name
                 </label>
                 <input class="appearance-none block w-full 
@@ -90,14 +90,14 @@
           </form>
             
           {#if selectedGuest && isGoing}
-          <button on:click={submit} class="bg-secondary text-white font-bold py-2 px-4 rounded">
+          <button on:click={submit} class="bg-secondary text-white font-bold py-2 px-4 rounded" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
             Submit
           </button>
           {/if}
         {/if}
 
         {#if isSubmitted}
-          <div class="text-2xl">
+          <div class="text-2xl" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
             <p>Thank you for your response!</p>
             {#if isGoing}
               <p>We will see you at the wedding!</p>
@@ -111,6 +111,9 @@
 </div>
 
 <script lang="ts">
+  import { slide } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
   import PocketBase from 'pocketbase'
   const pb = new PocketBase('/');
   import Svelecte from 'svelecte';
@@ -143,6 +146,7 @@
     //if null set isGoing to false
     if (selectedGuest == null) {
       isGoing = false;
+      selectedGuestNo = 0;
       return;
     }
     guestPlusOne = selectedGuest?.guest_no ? selectedGuest?.guest_no : 0;

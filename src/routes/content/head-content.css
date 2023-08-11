@@ -66,5 +66,5 @@
 }
 
 .menu-btn{
-    @apply bg-primary opacity-80 transition duration-150 ease-in-out hover:-translate-y-1 hover:opacity-100 bg-secondary;
+    @apply  underline text-center transition duration-150 ease-in-out hover:-translate-y-1 hover:text-secondary hover:opacity-100 ;
 }
