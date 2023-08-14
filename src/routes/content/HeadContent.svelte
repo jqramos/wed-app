@@ -14,7 +14,7 @@
 
 <div class="story h-auto">
     <!-- position at bottom of this section -->
-    <div class="justify-center px-3 menu-btns flex  flex-wrap bottom-1/4 gap-10 mb-10">            
+    <div class="justify-center px- menu-btns flex  flex-wrap bottom-1/4 gap-10 mb-10">            
         <a href="#home" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(0); }}>Home</a>
         <a href="#dress-code" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(2); }}>Travel</a>
         <a href="#dress-code" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(3); }}>Dress Code</a>
@@ -24,9 +24,7 @@
 
     {#if selectedContent === activeContent.tab}
     
-    <div transition:scale ={{ delay: 250, duration: 700, easing: cubicInOut, opacity:50}} >
         <svelte:component this={activeContent.component}/>
-    </div>
     {/if}
 
 </div>
