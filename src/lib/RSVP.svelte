@@ -8,7 +8,7 @@
       <!-- create forms for attendess -->
       <div>
         {#if !isSubmitted}
-          <form class="w-full max-w-lg mt-10" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
+          <div class="w-full max-w-lg mt-10" transition:fade={{ delay: 250, duration: 250, easing: quintOut}}>
               <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full  px-3 mb-6 md:mb-0">
                   <label class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2" for="grid-state">
@@ -38,7 +38,7 @@
 
                 <!-- show message asking if going or not -->
                 {#if selectedGuest && !isGoing}
-                    <div class="w-full text-center mt-5" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
+                    <div class="w-full text-center mt-5" transition:fade={{ delay: 250, duration: 250, easing: quintOut}}>
                       <p class="text-2xl">Are you going to attend the wedding?</p>
                       <div class="mt-2">
                         <!-- buttons to anser -->
@@ -53,7 +53,7 @@
                   {/if}
                 
                 {#if guestPlusOne > 0 && isGoing}
-                <div class="w-full  px-3 mb-6 md:mb-0 mt-3" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
+                <div class="w-full  px-3 mb-6 md:mb-0 mt-3" transition:fade={{ delay: 250, duration: 250, easing: quintOut}}>
                   <label class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2" for="grid-state">
                     Number of additional guest (only declared guest will have food)
                   </label>
@@ -76,7 +76,7 @@
                 {#if selectedGuestNo > 0}
                 {#each Array(selectedGuestNo) as _, i}
 
-                <div class="w-full md:w-full px-3 mt-3" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
+                <div class="w-full md:w-full px-3 mt-3" transition:fade={{ delay: 250, duration: 250, easing: quintOut}}>
                   <label class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2" for="grid-last-name">
                     Guest No {i+1} Name
                   </label>
@@ -89,17 +89,17 @@
                 {/if}
               </div>
               
-            </form>
+            </div>
               
             {#if selectedGuest && isGoing}
-            <button on:click={submit} class="bg-secondary text-white font-bold py-2 px-4 rounded" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
+            <button on:click={submit} class="bg-secondary text-white font-bold py-2 px-4 rounded" transition:fade={{ delay: 250, duration: 250, easing: quintOut}}>
               Submit
             </button>
             {/if}
           {/if}
 
           {#if isSubmitted}
-            <div class="text-2xl" transition:fade={{ delay: 250, duration: 500, easing: quintOut}}>
+            <div class="text-2xl" transition:fade={{ delay: 250, duration: 250, easing: quintOut}}>
               <p>Thank you for your response!</p>
               {#if isGoing}
                 <p>We will see you at the wedding!</p>
@@ -121,6 +121,7 @@
   import PocketBase from 'pocketbase'
   const pb = new PocketBase('/');
   import Svelecte from 'svelecte';
+  import { onMount } from 'svelte';
   let guests = [];
   let guestPlusOne;
   let selectedGuest = "";
@@ -130,6 +131,18 @@
 
   //make guestPlusOne reactive
   $: guestPlusOne;
+
+  onMount(async () => {
+    //get in localstorage if user already submitted
+    let submitted = localStorage.getItem('submitted');
+    let going = localStorage.getItem('isGoing');
+    if (submitted == 'true') {
+      isSubmitted = true;
+    }
+    if (going == 'true') {
+      isGoing = true;
+    }
+  });
 
 
   let resetOnBlur = true;
@@ -174,6 +187,7 @@
     }
 
     //call api
+    localStorage.setItem('isGoing', 'true');
     const record = sendData(data);
     return record;
   }
@@ -181,6 +195,7 @@
 
   async function sendData(data) {
     isSubmitted = true;
+    localStorage.setItem('submitted', 'true');
     return await pb.collection('guests').update(selectedGuest?.id, data);
   }
 
@@ -190,6 +205,7 @@
       guest_name: selectedGuest?.guest_name,
       response: "No"
     }
+    localStorage.setItem('isGoing', 'false');
 
     //call api
     const record = sendData(data);
