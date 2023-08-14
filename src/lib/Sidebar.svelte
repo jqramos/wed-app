@@ -31,3 +31,5 @@ class="sidebar md:w-1/4 w-3/4  h-screen  left-0 top-0 z-10">
     import { slide } from 'svelte/transition';
     import { quintOut } from 'svelte/easing';
 </script>
+
+

@@ -14,93 +14,18 @@
 
 <div class="story h-auto">
     <!-- position at bottom of this section -->
-    <div class="justify-center pl-4 menu-btns flex  flex-wrap bottom-1/4 gap-10 mb-10">            
+    <div class="justify-center px-3 menu-btns flex  flex-wrap bottom-1/4 gap-10 mb-10">            
         <a href="#home" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(0); }}>Home</a>
+        <a href="#dress-code" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(2); }}>Travel</a>
         <a href="#dress-code" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(3); }}>Dress Code</a>
         <a href="#rsvp" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(4); }}>RSVP</a>
         <a href="#faqs" class="btn menu-btn text-2xl" on:click={() => { viewContentByIndex(5); }}>FAQs</a>
     </div>
 
-    {#if selectedContent === 'home'}
-    <div transition:scale ={{ delay: 250, duration: 300, easing: cubicInOut, opacity:50 }} >
-        <!-- center contents -->
-        <div class="p-10 flex flex-col justify-center items-center  text-center">        
-            <p>
-                <span class="text-6xl pb-3  font-extrabold">
-                   November 24, 2023
-                </span>
-                <br>
-                <span class="text-4xl mt-2">
-                    Friday
-                <br>
-                <span class="text-4xl cursive mt-2">
-                    Alta Veranda de Tibig, Silang, Cavite
-                </span>
-                <br>
-                  
-                <br>
-                <span class="text-xl">
-                    {computeWeddingDate()}
-                </span>
-            </p>
-
-            <div>
-                <!-- ceremony schedule -->
-                <div class="mt-10">
-                    <h1 class="text-4xl cursive font-extrabold">Ceremony</h1>
-                    <!-- at daisy garden style it cool -->
-                    <p class="text-xl">
-                        Daisy Garden
-                    </p>
-                    <p class="text-xl">
-                        4:00 PM - 5:00 PM
-                    </p>
-                </div>
-                <!-- reception schedule -->
-                <div class="mt-10">
-                    <h1 class="text-4xl cursive font-extrabold">Reception</h1>
-                    <p class="text-xl">
-                        Plaza Guevarra
-                    </p>
-                    <p class="text-xl">
-                        5:00 PM - 10:00 PM
-                    </p>
-                </div>  
-
-            </div>
-        </div>
-    </div>
-    {/if}
-    {#if selectedContent === 'dress-code'}
-    <div transition:scale ={{ delay: 250, duration: 300, easing: cubicInOut, opacity:50 }} >
-        <Dresscode/>
-    </div>
-    {/if}
+    {#if selectedContent === activeContent.tab}
     
-    {#if selectedContent === 'rsvp'}
-    <div transition:scale ={{ delay: 250, duration: 300, easing: cubicInOut, opacity:50}} >
-        <Rsvp/>
-    </div>
-    {/if}
-    
-    
-    {#if selectedContent === 'faqs'}
-    <div transition:scale ={{ delay: 250, duration: 300, easing: cubicInOut, opacity:50}} >
-        <div class="p-10 flex flex-col justify-center items-center  text-center">    
-            <!-- create layout for wedding faqs numbered list-->
-    
-            <h1 class="text-5xl font-extrabold">Frequently Asked Questions</h1>
-            <ul>
-                <li class="text-xl">
-                    <span class="font-bold">What is the dress code?</span>
-                    <br>
-                    <span class="text-lg">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium nisl ut leo mollis interdum. Donec eu varius sem, sit amet ultrices diam. Curabitur elementum eros ac augue pellentesque, a ornare ligula cursus. Cras eu imperdiet turpis. Praesent cursus nisi a imperdiet accumsan. Nam non lobortis metus. Donec ac neque eget ligula porttitor hendrerit. Cras cursus risus nulla, ac venenatis ante commodo ut. Pellentesque mattis tristique iaculis. Integer risus neque, euismod vel libero eget, eleifend consequat felis. Mauris elit nunc, posuere non volutpat sit amet, placerat quis massa. Aliquam pulvinar laoreet congue. Proin ultricies ipsum ac erat viverra, sagittis pretium lacus aliquet. Aenean eget orci sed magna porta sagittis.
-                    </span>
-                </li>
-    
-            </ul>
-        </div>
+    <div transition:scale ={{ delay: 250, duration: 700, easing: cubicInOut, opacity:50}} >
+        <svelte:component this={activeContent.component}/>
     </div>
     {/if}
 
@@ -117,9 +42,15 @@
     import { slide } from 'svelte/transition';
 	import { scale  } from 'svelte/transition';
     import { cubicInOut, quintOut } from 'svelte/easing';
-
+    import Faqs from '../../lib/Faqs.svelte';
+    import Location from '../../lib/Location.svelte';
+    import Home from '../../lib/Home.svelte';
     let selectedContent = 'home';
-    const weddingDate = new Date('November 24, 2023 00:00:00 GMT+08:00');
+    //reactive variable activeContent
+    let activeContent =  {
+        tab: 'home',
+        component: Home
+    };
     const contentList = [
         'home',
         'invitation',
@@ -168,22 +99,52 @@
     function viewContentByIndex(index: number) {
         selectedContent = contentList[index];
         window.location.hash = `#${selectedContent}`;
+
+        switch (selectedContent) {
+            case 'home':
+                activeContent = {
+                    tab: 'home',
+                    component: Home
+                }
+                break;
+            case 'dress-code':
+                activeContent = {
+                    tab: 'dress-code',
+                    component: Dresscode
+                }
+                break;
+            case 'rsvp':
+                activeContent = {
+                    tab: 'rsvp',
+                    component: Rsvp
+                }
+                break;
+            case 'faqs':
+                activeContent = {
+                    tab: 'faqs',
+                    component: Faqs
+                }
+                break;
+            case 'location':
+                activeContent = {
+                    tab: 'location',
+                    component: Location
+                }
+                break;
+            default:
+                activeContent = {
+                    tab: 'home',
+                    component: Home
+                }
+                break;
+        }
+
+
         //scroll a little bit
         window.scrollTo(0, 300);
     }
 
-    // compute duration before nov 24 2023 gm+8
-    function computeWeddingDate() {
-        const currentDate = new Date();
-        const diff = weddingDate.getTime() - currentDate.getTime();
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const minutes = Math.floor(diff / (1000 * 60));
-        const seconds = Math.floor(diff / (1000));
-        //format like this 15 DAYS 13 HRS 24 MINS AGO assess if ago or to go
-        const go = diff > 0 ? 'TO GO' : 'AGO';
-        return `${Math.abs(days)} DAYS ${Math.abs(hours % 24)} HRS ${Math.abs(minutes % 60)} MINS ${go}`;
-    }
+
     
     
 </script>

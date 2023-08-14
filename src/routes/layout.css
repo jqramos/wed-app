@@ -55,5 +55,9 @@ footer {
 }
 
 .search-container {
-  min-width: 20vh;
+  min-width: 30vh;
+}
+
+.search-container .inputBox  {
+  min-width: 30vh;
 }
