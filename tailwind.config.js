@@ -100,6 +100,7 @@ export default {
         logo: "246px",
         nav: "390px",
         maximum: "1100px",
+        container: "1920px",
       },
       backgroundImage: {
         gradient1:

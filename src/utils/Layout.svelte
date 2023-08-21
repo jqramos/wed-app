@@ -7,7 +7,7 @@
 
 <Header />
 
-<main>
+<main class="max-w-container mx-auto">
     {#each components as component}
         <svelte:component this={component} />
     {/each}
