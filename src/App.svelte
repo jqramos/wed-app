@@ -1,9 +1,7 @@
 <script lang="ts">
-  import Layout from './routes/Layout.svelte';
+  import Home from './routes/Home.svelte';
   import './app.css';
 </script>
 
-<main>
-  <Layout></Layout>
-  
-</main>
+<!-- To Do: Update to page routing -->
+<Home/>
