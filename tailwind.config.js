@@ -74,7 +74,7 @@ export default {
       },
       fontSize: {
         eyebrow: ["12px", "16.8px"],
-        base: ["16px", "22.4px"],
+        base: ["16px", "28.8px"],
         p1: ["21px", "29.4px"],
         p2: ["27px", "37.8px"],
         h1: ["80px", "112px"],
@@ -107,6 +107,10 @@ export default {
           "linear-gradient(180deg, rgba(23, 22, 22, 0.21) 0%, rgba(23, 22, 22, 0.67) 56.77%, #171616 100%)",
         gradient2:
           "linear-gradient(270deg, rgba(55, 52, 52, 0.00) 0%, rgba(55, 52, 52, 0.58) 51.04%, #373434 100%)",
+        gradient3:
+          "linear-gradient(180deg, rgba(55, 52, 52, 0.00) 0%, rgba(55, 52, 52, 0.63) 100%)",
+        gradient4:
+          "linear-gradient(180deg, rgba(120, 50, 38, 0.00) 56.77%, rgba(120, 50, 38, 0.44) 78.13%, rgba(120, 50, 38, 0.97) 100%)",
       },
       zIndex: {
         ground: "0",

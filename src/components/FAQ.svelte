@@ -4,21 +4,21 @@
             <picture>
                 <!-- <source srcset="../../static/images/carousel-1.webp" type="image/webp"> -->
                 <source srcset="../../static/images/carousel-1.jpg" type="image/jpeg">
-                <img class="h-full w-auto object-cover object-right lg:w-full" src="../../static/images/carousel-1.jpg" alt="">
+                <img class="h-full w-auto object-cover object-right-top lg:w-full" src="../../static/images/carousel-1.jpg" alt="">
             </picture>
         </div>
         <div class="swiper-slide">
             <picture>
                 <!-- <source srcset="../../static/images/carousel-2.webp" type="image/webp"> -->
                 <source srcset="../../static/images/carousel-2.jpg" type="image/jpeg">
-                <img class="h-full w-auto object-cover object-right lg:w-full" src="../../static/images/carousel-2.jpg" alt="">
+                <img class="h-full w-auto object-cover object-right-top lg:w-full" src="../../static/images/carousel-2.jpg" alt="">
             </picture>
         </div>
         <div class="swiper-slide">
             <picture>
                 <!-- <source srcset="../../static/images/carousel-3.webp" type="image/webp"> -->
                 <source srcset="../../static/images/carousel-3.jpg" type="image/jpeg">
-                <img class="h-full w-auto object-cover object-right lg:w-full" src="../../static/images/carousel-3.jpg" alt="">
+                <img class="h-full w-auto object-cover object-right-top lg:w-full" src="../../static/images/carousel-3.jpg" alt="">
             </picture>
         </div>
     </div>
