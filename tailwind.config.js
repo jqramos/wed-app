@@ -69,6 +69,8 @@ export default {
         "grey-700": "#272525",
         "grey-800": "#1e1d1d",
         "grey-900": "#171616",
+
+        "grey-rgba-700": "rgba(39, 37, 37, 0.7)",
       },
       fontSize: {
         eyebrow: ["12px", "16.8px"],
@@ -98,10 +100,13 @@ export default {
         logo: "246px",
         nav: "390px",
         maximum: "1100px",
+        container: "1920px",
       },
       backgroundImage: {
         gradient1:
           "linear-gradient(180deg, rgba(23, 22, 22, 0.21) 0%, rgba(23, 22, 22, 0.67) 56.77%, #171616 100%)",
+        gradient2:
+          "linear-gradient(270deg, rgba(55, 52, 52, 0.00) 0%, rgba(55, 52, 52, 0.58) 51.04%, #373434 100%)",
       },
       zIndex: {
         ground: "0",

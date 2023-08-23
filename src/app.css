@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary-700: #783226;
+
+  background-color: var(--primary-700);
+}
