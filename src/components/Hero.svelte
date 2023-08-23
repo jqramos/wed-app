@@ -3,9 +3,9 @@
 </script>
 
 
-<section class="relative h-screen text-white overflow-hidden before:absolute before:h-full before:w-full before:bg-gradient1 before:inset-0" style="background: url(/images/image-1.webp) no-repeat cover;">
+<section class="relative h-screen text-white overflow-hidden before:absolute before:h-full before:w-full before:bg-gradient1 before:inset-0">
     <div class="h-full w-full">
-        <img class="h-full w-full object-cover" src="/images/image-5.webp" alt="">
+        <img class="h-full w-full object-cover" src="/static/images/image-5.webp" alt="">
     </div>
     <div class="absolute inset-0">
         <div class="wrapper h-full">
