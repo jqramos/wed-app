@@ -1,9 +1,9 @@
 
 <section class="relative text-neutral-300 bg-secondary-700">
     <picture class="hidden lg:block h-screen w-full">
-        <!-- <source srcset="public/images/carousel-1.webp" type="image/webp"> -->
-        <source srcset="public/images/image02.jpg" type="image/jpeg">
-        <img class="h-screen w-full object-cover object-right max-w-[50%] ml-auto" src="public/images/carousel-1.jpg" alt="">
+        <!-- <source srcset="../../static/images/carousel-1.webp" type="image/webp"> -->
+        <source srcset="/images/image02.jpg" type="image/jpeg">
+        <img class="h-screen w-full object-cover object-right max-w-[50%] ml-auto" src="/images/carousel-1.jpg" alt="">
     </picture>
     <div class="lg:absolute lg:top-0 lg:left-0 z-ground w-full h-screen">
         <div class="wrapper h-full">

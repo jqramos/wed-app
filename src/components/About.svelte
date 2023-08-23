@@ -1,9 +1,15 @@
 
 <section class="relative text-neutral-300">
     <picture class="relative h-screen w-full lg:max-w-[50vw] before:absolute before:inset-0 before:bg-gradient4 before:lg:hidden">
+<<<<<<< Updated upstream
         <!-- <source srcset="public/images/carousel-1.webp" type="image/webp"> -->
         <source srcset="public/images/image01.jpg" type="image/jpeg">
         <img class="w-full object-cover object-right lg:h-screen lg:max-w-[50%]" src="public/images/carousel-1.jpg" alt="">
+=======
+        <!-- <source srcset="../../static/images/carousel-1.webp" type="image/webp"> -->
+        <source srcset="images/image01.jpg" type="image/jpeg">
+        <img class="w-full object-cover object-right lg:h-screen lg:max-w-[50%]" src="images/carousel-1.jpg" alt="">
+>>>>>>> Stashed changes
     </picture>
     <div class="lg:absolute lg:top-0 lg:eft-0 z-ground lg:w-full lg:h-screen pb-s12 -mt-s5 lg:p-0 lg:m-0">
         <div class="wrapper lg:h-full">
