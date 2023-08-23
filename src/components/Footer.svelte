@@ -1,9 +1,9 @@
 
 <footer class="relative text-neutral-300 before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient3 before:z-above-ground">
     <picture class="h-screen w-full">
-        <!-- <source srcset="../../static/images/carousel-1.webp" type="image/webp"> -->
-        <source srcset="../../static/images/image03.jpg" type="image/jpeg">
-        <img class="h-screen w-full object-cover object-top" src="../../static/images/carousel-1.jpg" alt="">
+        <!-- <source srcset="public/images/carousel-1.webp" type="image/webp"> -->
+        <source srcset="public/images/image03.jpg" type="image/jpeg">
+        <img class="h-screen w-full object-cover object-top" src="public/images/carousel-1.jpg" alt="">
     </picture>
     <div class="absolute top-0 left-0 z-above-ground w-full h-screen pb-s12">
         <div class="wrapper h-full">
