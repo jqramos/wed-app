@@ -17,6 +17,9 @@ dependencies:
   svelte-select:
     specifier: ^5.6.1
     version: 5.6.1
+  svelte-spa-router:
+    specifier: ^3.3.0
+    version: 3.3.0
   swiper:
     specifier: ^10.2.0
     version: 10.2.0
@@ -1245,6 +1248,11 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /regexparam@2.0.1:
+    resolution: {integrity: sha512-zRgSaYemnNYxUv+/5SeoHI0eJIgTL/A2pUtXUPLHQxUldagouJ9p+K6IbIZ/JiQuCEv2E2B1O11SjVQy3aMCkw==}
+    engines: {node: '>=8'}
+    dev: false
+
   /resolve-from@5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
@@ -1407,6 +1415,12 @@ packages:
     dependencies:
       '@floating-ui/dom': 1.5.1
       svelte-floating-ui: 1.2.8
+    dev: false
+
+  /svelte-spa-router@3.3.0:
+    resolution: {integrity: sha512-cwRNe7cxD43sCvSfEeaKiNZg3FCizGxeMcf7CPiWRP3jKXjEma3vxyyuDtPOam6nWbVxl9TNM3hlE/i87ZlqcQ==}
+    dependencies:
+      regexparam: 2.0.1
     dev: false
 
   /svelte-tiny-virtual-list@2.0.5:

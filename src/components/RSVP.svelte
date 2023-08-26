@@ -182,7 +182,7 @@
       //create object to be sent to api
       const data = {
         guest_name: selectedGuest?.guest_name,
-        addded_guest: JSON.stringify(guestNames),
+        added_guest: JSON.stringify(guestNames),
         response: "Yes"
       }
   
