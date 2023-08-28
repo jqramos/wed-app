@@ -4,6 +4,7 @@
     import FAQ from '../components/FAQ.svelte';
     import About from '../components/About.svelte';
     import Details from '../components/Details.svelte';
+    import RSVP from '../components/RSVP.svelte';
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger.js";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
@@ -62,7 +63,7 @@
 
       // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes):
       ScrollTrigger.create({
-        start: 0, 
+        start: 0,
         end: "max",
         snap: 1 / (panels.length - 1)
       })
@@ -74,7 +75,7 @@
           e.stopImmediatePropagation();
         }
       }, {capture: true, passive: false})
-      
+
 
     })
 </script>
