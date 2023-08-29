@@ -14,6 +14,12 @@
   background-color: var(--primary-700);
 }
 
+.svelecte .sv-control,
+.guest-field  {
+  background-color: var(--neutral-700) !important;
+  border-radius: 0 !important;
+}
+
 .dot {
   opacity: 0.5;
   scale: 0.8;
@@ -25,16 +31,14 @@
   scale: 1.1;
 }
 
-.svelecte .sv-control {
-  background-color: var(--neutral-700) !important;
-  border-radius: 0 !important;
-}
 
-.svelecte .inputBox {
+.svelecte .inputBox,
+.guest-field {
   height: 67px !important;
 }
 
-.svelecte .inputBox::placeholder {
+.svelecte .inputBox::placeholder,
+.guest-field::placeholder  {
   color: var(--primary-600) !important;
 }
 

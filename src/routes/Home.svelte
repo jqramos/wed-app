@@ -88,4 +88,4 @@
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Footer"></button>
 </div>
 
-<Layout components={[Hero, About, Details, FAQ]} />
+<Layout components={[Hero, About, Details, FAQ, RSVP]} />
