@@ -5,15 +5,16 @@
 </script>
 
 
-<Header />
+    <Header />
+    <main class="max-w-container mx-auto">
 
-<main class="max-w-container mx-auto">
-    {#each components as component}
-        <svelte:component this={component} />
-    {/each}
+        {#each components as component}
+            <svelte:component this={component} />
+        {/each}
+
 </main>
 
-<Footer />
+    <Footer />
 
 <style>
     @import 'https://use.typekit.net/lag7kyw.css';

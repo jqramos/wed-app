@@ -1,4 +1,4 @@
-<section class="swiper relative overflow-hidden h-screen w-full text-neutral-300 before:lg:absolute before:lg:inset-0 before:lg:h-full before:lg:w-full before:lg:bg-gradient2 before:lg:z-above-ground">
+<section class="panel js-panel swiper relative overflow-hidden h-screen w-full text-neutral-300 before:lg:absolute before:lg:inset-0 before:lg:h-full before:lg:w-full before:lg:bg-gradient2 before:lg:z-above-ground">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <picture>
