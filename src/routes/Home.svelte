@@ -85,6 +85,7 @@
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To About"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Details"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To FAQ"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To RSVP"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Footer"></button>
 </div>
 
