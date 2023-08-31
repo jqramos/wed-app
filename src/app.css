@@ -3,9 +3,21 @@
 @tailwind utilities;
 
 :root {
+  --primary-600: #9a4131;
   --primary-700: #783226;
+  --neutral-700: #b3a293;
+  --neutral-800: #8b7d72;
+  --grey-700: #272525;
+
+  --spacing-s1: 8px;
 
   background-color: var(--primary-700);
+}
+
+.svelecte .sv-control,
+.guest-field  {
+  background-color: var(--neutral-700) !important;
+  border-radius: 0 !important;
 }
 
 .dot {
@@ -17,4 +29,26 @@
 .dot[data-active="true"] {
   opacity: 1;
   scale: 1.1;
+}
+
+
+.svelecte .inputBox,
+.guest-field {
+  height: 67px !important;
+}
+
+.svelecte .inputBox::placeholder,
+.guest-field::placeholder  {
+  color: var(--primary-600) !important;
+}
+
+.svelecte .sv-dropdown {
+  background-color: var(--neutral-800) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--grey-700);
+}
+
+.svelecte .sv-dropdown .sv-dd-item {
+  padding: var(--spacing-s1);
 }
