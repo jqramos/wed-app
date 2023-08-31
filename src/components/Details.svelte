@@ -1,14 +1,14 @@
 
-<section class="relative text-neutral-300 bg-secondary-700">
-    <picture class="hidden lg:block h-screen w-full">
+<section class="panel js-panel overflow-hidden h-screen w-full relative text-neutral-300 bg-secondary-700 before:lg:hidden before:absolute before:h-full before:w-full before:bg-gradient1 before:inset-0">
+    <picture class="h-full w-full">
         <!-- <source srcset="/static/images/carousel-1.webp" type="image/webp"> -->
         <source srcset="/static/images/image02.jpg" type="image/jpeg">
-        <img class="h-screen w-full object-cover object-right max-w-[50%] ml-auto" src="/static/images/carousel-1.jpg" alt="">
+        <img class="h-screen w-full object-cover object-right lg:max-w-[50%] ml-auto" src="/static/images/carousel-1.jpg" alt="">
     </picture>
-    <div class="lg:absolute lg:top-0 lg:left-0 z-ground w-full h-screen">
+    <div class="absolute top-0 left-0 z-ground w-full h-screen">
         <div class="wrapper h-full">
             <div class="col-start-1 col-span-5 flex flex-col item-center justify-center">
-                <h2 class="mb-s4 lg:mb-s max-w-[337px]">
+                <h2 class="mb-s4 lg:mb-s max-w-[250px] lg:max-w-[337px]">
                     <span class="font-serif text-h3 lg:text-h2 uppercase">Wedding</span> 
                     <span class="block font-sans text-p2 lg:text-h3 text-right text-primary-300 font-light italic -translate-y-[20px] lg:-translate-y-[30px]">details</span>
                 </h2>

@@ -1,5 +1,5 @@
 
-<footer class="relative text-neutral-300 before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient3 before:z-above-ground">
+<footer class="panel js-panel relative text-neutral-300 before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient3 before:z-above-ground">
     <picture class="h-screen w-full">
         <!-- <source srcset="/static/images/carousel-1.webp" type="image/webp"> -->
         <source srcset="/static/images/image03.jpg" type="image/jpeg">

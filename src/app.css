@@ -7,3 +7,14 @@
 
   background-color: var(--primary-700);
 }
+
+.dot {
+  opacity: 0.5;
+  scale: 0.8;
+  transition: 0.2s scale ease-in-out, 0.2s opacity ease-in-out;
+}
+
+.dot[data-active="true"] {
+  opacity: 1;
+  scale: 1.1;
+}
