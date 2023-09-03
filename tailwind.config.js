@@ -111,6 +111,8 @@ export default {
           "linear-gradient(180deg, rgba(55, 52, 52, 0.00) 0%, rgba(55, 52, 52, 0.63) 100%)",
         gradient4:
           "linear-gradient(180deg, rgba(120, 50, 38, 0.00) 56.77%, rgba(120, 50, 38, 0.44) 78.13%, rgba(120, 50, 38, 0.97) 100%)",
+        gradient5:
+          "linear-gradient(180deg, rgba(39, 37, 37, 0.67) 27.6%, rgba(39, 37, 37, 0.00) 100%);",
       },
       zIndex: {
         ground: "0",
@@ -120,6 +122,10 @@ export default {
         "above-ground2": "100",
         navigation: "999",
         "above-all": "9999",
+      },
+      listStyleType: {
+        square: "square",
+        roman: "upper-roman",
       },
     },
   },

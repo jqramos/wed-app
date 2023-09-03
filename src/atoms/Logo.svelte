@@ -1,4 +1,8 @@
-<svg class="max-w-[100px] lg:max-w-[170px]" width="171" height="189" viewBox="0 0 171 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+<script>
+    export let className;
+</script>
+
+<svg class="{className}" width="171" height="189" viewBox="0 0 171 189" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_6_1953)">
 <path d="M78.8617 150.788C80.5037 164.067 71.3086 178.533 59.0486 183.485C75.265 169.722 62.6296 145.851 58.6889 128.963C55.8272 119.043 52.9654 109.123 50.1037 99.218C44.5835 80.0961 39.0634 60.9743 33.5588 41.8525C31.7918 36.5408 33.0741 34.713 33.0741 34.713L42.5663 24.949C54.3103 66.9889 67.7588 108.607 78.8774 150.788H78.8617Z" fill="white" stroke="white" stroke-width="0.51" stroke-miterlimit="10"/>
 <path d="M59.0173 183.454C53.2938 186.735 46.6477 188.609 39.5794 188.609C17.9366 188.609 0.390945 171.081 0.390945 149.46C0.390945 138.649 4.76955 128.869 11.8691 121.777" stroke="white" stroke-width="0.51" stroke-miterlimit="10"/>

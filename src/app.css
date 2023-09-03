@@ -15,7 +15,7 @@
 }
 
 .svelecte .sv-control,
-.guest-field  {
+.guest-field {
   background-color: var(--neutral-700) !important;
   border-radius: 0 !important;
 }
@@ -31,14 +31,13 @@
   scale: 1.1;
 }
 
-
 .svelecte .inputBox,
 .guest-field {
   height: 67px !important;
 }
 
 .svelecte .inputBox::placeholder,
-.guest-field::placeholder  {
+.guest-field::placeholder {
   color: var(--primary-600) !important;
 }
 

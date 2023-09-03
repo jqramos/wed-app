@@ -1,6 +1,7 @@
 <script lang="ts">
     import Header from '../components/Header.svelte';
     import Footer from '../components/Footer.svelte';
+  import Modal from '../atoms/Modal.svelte';
     export let components;
 </script>
 
@@ -12,9 +13,11 @@
             <svelte:component this={component} />
         {/each}
 
-</main>
+    </main>
 
     <Footer />
+
+    <Modal />
 
 <style>
     @import 'https://use.typekit.net/lag7kyw.css';

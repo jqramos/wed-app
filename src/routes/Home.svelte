@@ -16,6 +16,7 @@
       // get all panels and dots
       const indicator = document.querySelector(".js-indicator");
       const dots = indicator.querySelectorAll(".js-dot");
+      const header = document.querySelector(".js-header");
       let panels = gsap.utils.toArray(".js-panel"),
           observer = ScrollTrigger.normalizeScroll(true),
           scrollTween;
@@ -29,7 +30,15 @@
             observer.enable();
           },
           duration: 1,
-          onComplete: () => scrollTween = null,
+          onComplete: () => {
+            scrollTween = null
+            
+            if (i === 0) {
+              (header as HTMLElement).style.opacity = '0';
+            } else {
+              (header as HTMLElement).style.opacity = '1';
+            }
+          },
           overwrite: true
         });
       }
