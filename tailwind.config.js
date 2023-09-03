@@ -113,6 +113,8 @@ export default {
           "linear-gradient(180deg, rgba(120, 50, 38, 0.00) 56.77%, rgba(120, 50, 38, 0.44) 78.13%, rgba(120, 50, 38, 0.97) 100%)",
         gradient5:
           "linear-gradient(180deg, rgba(39, 37, 37, 0.67) 27.6%, rgba(39, 37, 37, 0.00) 100%);",
+        gradient6:
+          "linear-gradient(180deg, rgba(120, 50, 38, 0.92) 26.56%, rgba(154, 65, 49, 0.00) 100%)",
       },
       zIndex: {
         ground: "0",

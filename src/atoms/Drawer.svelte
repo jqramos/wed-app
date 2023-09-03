@@ -11,7 +11,7 @@
   {#if isOpen}
     <div role="dialog" class="fixed top-0 right-0 py-s5 bg-neutral-600 h-full w-full lg:w-[50vw] z-above-all" transition:slide|global={{ duration: 300, axis: 'x' }}>
       <div class="relative px-s8 w-full h-full overflow-y-auto">
-        <h2 class="font-serif uppercase text-h2 lg:text-h4 text-primary-600 font-semibold mb-s2 lg:mb-s4">Couple's Fun Facts</h2>
+        <h2 class="font-serif uppercase text-p2 lg:text-h4 text-primary-600 font-semibold mb-s2 lg:mb-s4">Couple's Fun Facts</h2>
         <ul class="list-square">
           <li class="pb-s1 text-base lg:text-p1">Met on a dating app and met personally after a month of talking on 2019</li>
           <li class="pb-s1 text-base lg:text-p1">November 24 is our gf/bf anniversary, It's our 4th official year together on our wedding date</li>

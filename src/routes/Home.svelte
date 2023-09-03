@@ -4,6 +4,7 @@
     import FAQ from '../components/FAQ.svelte';
     import About from '../components/About.svelte';
     import Details from '../components/Details.svelte';
+    import Timeline from '../components/Timeline.svelte';
     import RSVP from '../components/RSVP.svelte';
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger.js";
@@ -94,8 +95,9 @@
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To About"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Details"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To FAQ"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Timeline"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To RSVP"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Footer"></button>
 </div>
 
-<Layout components={[Hero, About, Details, FAQ, RSVP]} />
+<Layout components={[Hero, About, Details, FAQ, Timeline, RSVP]} />
