@@ -14,9 +14,9 @@
 <section class="panel js-panel py-s7 lg:py-s10 h-screen w-full overflow-hidden bg-center relative text-neutral-300 bg-[url('/static/images/image05.jpeg')] bg-cover before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient6 before:z-ground">
         <div class="relative wrapper h-full z-above-ground">
             <div class="col-span-full">
-                <h2 class="mb-s4 lg:mb-s text-center">
+                <h2 class="mb-s4 lg:mb-s4 mt-s5 text-center max-w-[360px] mx-auto">
                     <span class="font-serif text-h3 lg:text-h2 uppercase">Wedding</span> 
-                    <span class="block lg:inline-block font-sans text-p2 lg:text-h3 text-right text-primary-300 font-light italic">timeline</span>
+                    <span class="relative block font-sans text-p2 lg:text-h3 text-right text-secondary-400 font-light italic -top-[15px]">timeline</span>
                 </h2>
                 <div class="timeline overflow-x-scroll lg:overflow-hidden relative before:rounded before:min-w-[980px] before:absolute before:top-[50%] before:left-0 before:h-[2px] before:w-full before:bg-white">
                     <div class="timeline-item min-w-[140px] relative before:rounded before:absolute before:-bottom-[2px] before:left-[50%] before:h-[20px] before:w-[2px] before:bg-white">
