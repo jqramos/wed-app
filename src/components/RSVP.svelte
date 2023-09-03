@@ -1,4 +1,4 @@
-<section class="panel js-panel swiper relative overflow-hidden h-screen relative text-neutral-300 bg-grey-600">
+<section class="panel js-panel swiper relative overflow-hidden h-screen text-neutral-300 bg-grey-600">
     <picture class="hidden lg:block h-screen w-full">
         <!-- <source srcset="/static/images/carousel-1.webp" type="image/webp"> -->
         <source srcset="/static/images/image04.jpg" type="image/jpeg">
