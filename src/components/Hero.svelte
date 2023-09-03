@@ -10,8 +10,8 @@
     <div class="absolute inset-0">
         <div class="wrapper h-full">
             <div class="col-span-full flex justify-center items-center flex-col">
-                <Logo />
-                <h1 class="font-serif text-h3 lg:text-h1 uppercase text-center mb-s2">Jayvee <span class="block lg:inline">&</span> Victoria</h1>
+                <Logo className="max-w-[100px] lg:max-w-[170px] h-auto mb-s4" />
+                <h1 class="font-serif text-h3 lg:text-h1 uppercase text-center mb-s2">Jayvee <span class="block md:inline">&</span> Victoria</h1>
                 <h3 class="font-serif text-p1 lg:text-h4 uppercase text-center">The Wedding</h3>
             </div>
         </div>
