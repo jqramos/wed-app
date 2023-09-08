@@ -1,0 +1,58 @@
+[
+  {
+    "question": "What time should I arrive?",
+    "answer": "We encourage you to arrive at 3:00-3:30 PM to give you time to settle down and find your seats before the processional starts at 4:00 pm."
+  },
+  {
+    "question": "Can we take pictures and videos during the wedding ceremony?",
+    "answer": "Our Ceremony will be unplugged and solemn. Please turn off and kepp your phones during the processional and ceremony. You may take photos after we have been pronounced husband and wife. We have an incredible team of photographers and videographers on hand to capture the moment. We promise to share the photos with you after the wedding."
+  },
+  {
+    "question": "Can I bring someone with me? (Plus one, date, driver, etc.)",
+    "answer": "As much as we’d love everyone to join us in our celebration, please refer to your RSVP card for the number of allotted seat/s to your party. Unfortunately, due to budget constraints, we can only accommodate a limited number of guests"
+  },
+  {
+    "question": "Can I bring our kids to the wedding?",
+    "answer": "We love children, but sadly cannot accommodate them at the venue due to necessity rather than choice. The only kids attending are those we requested. We appreciate your understanding."
+  },
+  {
+    "question": "Do we really need to RSVP?",
+    "answer": "Yes please. We need to consolidate rguest details and finalise headcount for catering and seating arrangements. We also need a final guest list because the reception venue has strict entry requirements.\n"
+  },
+  {
+    "question": "If I RSVP “NO” but my schedule suddenly frees up, What should I do?",
+    "answer": "Please let us know right away so we can confirm. Having said that, please understand that we may have already reallocated your seat."
+  },
+  {
+    "question": "If I RSVP “YES” but my schedule suddenly changes, What should I do?",
+    "answer": "We would love to have you at our wedding, but we understand that some things are beyond our control. Please let us know right away so we can adjust the reallocation of seats."
+  },
+  {
+    "question": "Do you have a gift preference?",
+    "answer": "Your presence at our wedding is present enough but should you still believe that a gift is worth giving, a small envelope for our future will be a delightful blessing."
+  },
+  {
+    "question": "Can we sit anywhere during the reception?",
+    "answer": "Please don’t. You’ll be seated along with your family or friends. It took a lot of effort and discussion to complete the seating arrangement that is designed to everyone’s comfort and network preference."
+  },
+  {
+    "question": "Who do we get in touch with if you are unable to contact you on our wedding day?",
+    "answer": "Please understand that we may not be able to respond to you during the day because we wil be busy preparing. If there are urgnt concerns, you may contact the following",
+    "list": [
+      "Our coordinator:", "Maid of Honor: Janica Chioco", "Maid of Honor: Mae Ann Cayabyab", "Best Man: Gemerson Bagtas"
+    ]
+  },
+  {
+    "question": "Where can we park our cars and how much will it cost?",
+    "answer": "The venue can accommodate up to 70 cars. Parking is free."
+  },
+  {
+    "question": "When is the appropriate time to leave?",
+    "answer": "We aim to end the program at 9:00 pm, please don’t eat and run. We’d love to thank you and say goodbye if you have to leave early. Maybe not while they’re showing the sme day edit video."
+  },
+  {
+    "question": "How can we help the couple have the best time during the wedding?",
+    "list": ["Pray with us for favors and provisions", "RSVP Now!",
+      " Wear appropriate attire", "Be there on time", "Stay until end of the program","Enjoy!"]
+  }
+]
