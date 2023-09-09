@@ -25,7 +25,7 @@
 </script>
 
 <section class="panel js-panel relative overflow-hidden h-screen w-full text-neutral-300 before:lg:absolute before:lg:inset-0 before:lg:h-full before:lg:w-full before:lg:bg-gradient2 before:lg:z-above-ground">
-    <swiper-container class="faq-bg"
+    <swiper-container class="faq-bg h-screen"
             slides-per-view={1}
             centered-slides={true}
             pagination={true}
@@ -38,26 +38,26 @@
         <swiper-slide>
             <picture>
                 <source srcset="/static/images/carousel-1.jpg" type="image/jpeg">
-                <img class="h-full w-auto object-cover object-right-top lg:w-full" src="/static/images/carousel-1.jpg" alt="">
+                <img class="faq-bg-image" src="/static/images/carousel-1.jpg" alt="">
             </picture>
         </swiper-slide>
         <swiper-slide>
             <picture>
             <source srcset="/static/images/carousel-2.jpg" type="image/jpeg">
-            <img class="h-full w-auto object-cover object-right-top lg:w-full" src="/static/images/carousel-2.jpg" alt="">
+            <img class="faq-bg-image" src="/static/images/carousel-2.jpg" alt="">
         </picture>
         </swiper-slide>
         <swiper-slide>
             <picture>
                 <source srcset="/static/images/carousel-3.jpg" type="image/jpeg">
-                <img class="h-full w-auto object-cover object-right-top lg:w-full" src="/static/images/carousel-3.jpg" alt="">
+                <img class="faq-bg-image" src="/static/images/carousel-3.jpg" alt="">
             </picture>
         </swiper-slide>
     </swiper-container>
     <div class="absolute h-full w-full inset-0 z-above-ground2">
         <div class="wrapper h-full">
             <div class="col-span-full lg:col-span-7 flex items-center">
-                <div class="px-s2 lg:px-s5 py-s8 bg-grey-rgba-700  max-w-[570px]">
+                <div class="px-s2 lg:px-s5 py-s8 bg-grey-rgba-700 lg:max-w-[570px] sm:max-w-full">
                     <h2 class="mb-s4 lg:mb-s">
                         <span class="font-serif text-h3 md:text-h2 uppercase">Frequently</span>
                         <span class="block font-sans text-p2 md:text-h3 text-right text-primary-300 font-light italic -translate-y-[20px] lg:-translate-y-[30px]">asked questions</span>
