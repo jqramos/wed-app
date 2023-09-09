@@ -3,7 +3,7 @@
     <picture class="h-full w-full">
         <!-- <source srcset="/static/images/carousel-1.webp" type="image/webp"> -->
         <source srcset="/static/images/image02.jpg" type="image/jpeg">
-        <img class="h-screen w-full object-cover object-right lg:max-w-[50%] ml-auto" src="/static/images/carousel-1.jpg" alt="">
+        <img class="h-screen w-full object-cover object-right lg:max-w-[50%] ml-auto detail-bg-img" src="/static/images/carousel-1.jpg" alt="">
     </picture>
     <div class="absolute top-0 left-0 z-ground w-full h-screen">
         <div class="wrapper h-full">

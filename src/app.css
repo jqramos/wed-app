@@ -51,3 +51,21 @@
 .svelecte .sv-dropdown .sv-dd-item {
   padding: var(--spacing-s1);
 }
+
+.faq-bg-image {
+  @apply h-full w-auto object-cover object-right-top lg:w-full;
+}
+
+@screen sm {
+  .faq-bg-image {
+    object-position: -19cm 0;
+  }
+
+  .hero-bg-img {
+    object-position: -35rem 0;
+  }
+
+  .detail-bg-img {
+    object-position: -10rem 0;
+  }
+}
