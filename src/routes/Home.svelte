@@ -21,6 +21,9 @@
       let panels = gsap.utils.toArray(".js-panel"),
           observer = ScrollTrigger.normalizeScroll(true),
           scrollTween;
+      const isAndroid = /Android/i.test(navigator.userAgent);
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
 
 
       function goToSection(i) {
@@ -51,17 +54,19 @@
       }
 
       panels.forEach((panel, i) => {
-        ScrollTrigger.create({
-          trigger: panel,
-          start: "top bottom",
-          end: "+=199%",
-          onToggle: self => {
-            if (self.isActive && !scrollTween) {
-              goToSection(i)
-              setActiveDot(dots[i], i)
-            }
-          },
-        });
+        if(!isAndroid || (!isMobile && isAndroid)) {
+          ScrollTrigger.create({
+            trigger: panel,
+            start: "top bottom",
+            end: "+=199%",
+            onToggle: self => {
+              if (self.isActive && !scrollTween) {
+                goToSection(i)
+                setActiveDot(dots[i], i)
+              }
+            },
+          });
+        }
       });
 
       dots.forEach((dot, idx) => {
@@ -80,7 +85,7 @@
 
     // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
       document.addEventListener("touchstart", e => {
-        if (scrollTween || window.innerHeight < window.outerHeight) {
+        if (scrollTween) {
           e.preventDefault();
           e.stopImmediatePropagation();
         }
