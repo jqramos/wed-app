@@ -49,6 +49,7 @@
     .timeline {
         display: grid;
         grid-template-areas: "a . c . e . g" ". b . d . f .";
+        -webkit-overflow-scrolling: touch;
     }
 
     .timeline-item:nth-of-type(1) {
