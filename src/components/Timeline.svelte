@@ -18,7 +18,7 @@
                     <span class="font-serif text-h3 lg:text-h2 uppercase">Wedding</span> 
                     <span class="relative block font-sans text-p2 lg:text-h3 text-right text-secondary-400 font-light italic -top-[15px]">timeline</span>
                 </h2>
-                <div class="timeline overflow-x-scroll lg:overflow-hidden relative before:rounded before:min-w-[980px] before:absolute before:top-[50%] before:left-0 before:h-[2px] before:w-full before:bg-white">
+                <div class="timeline overflow-x-scroll lg:overflow-hidden touch-auto relative before:rounded before:min-w-[980px] before:absolute before:top-[50%] before:left-0 before:h-[2px] before:w-full before:bg-white">
                     <div class="timeline-item min-w-[140px] relative before:rounded before:absolute before:-bottom-[2px] before:left-[50%] before:h-[20px] before:w-[2px] before:bg-white">
                         <Icon iconName={icon1} iconCaption="church call time" />
                     </div>

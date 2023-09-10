@@ -28,11 +28,7 @@
     <swiper-container class="faq-bg h-screen"
             slides-per-view={1}
             centered-slides={true}
-            pagination={true}
-            autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-            }}
+            pagination={false}
             loop={true}
     >
         <swiper-slide>

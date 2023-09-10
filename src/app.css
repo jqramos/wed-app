@@ -56,13 +56,14 @@
   @apply h-full w-auto object-cover object-right-top lg:w-full;
 }
 
-@screen sm {
+/*at sm screen  size*/
+@media (max-width: 640px) {
   .faq-bg-image {
     object-position: -19cm 0;
   }
 
   .hero-bg-img {
-    object-position: -35rem 0;
+    object-position: 63% 0;
   }
 
   .detail-bg-img {
