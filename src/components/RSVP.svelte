@@ -4,7 +4,7 @@
         <source srcset="/static/images/image04.jpg" type="image/jpeg">
         <img class="h-screen w-full object-cover object-right max-w-[50%] ml-auto" src="/static/images/image04.jpg" alt="">
     </picture>
-    <div class="lg:absolute lg:top-0 lg:left-0 z-ground w-full h-screen">
+    <div class="lg:absolute lg:top-0 lg:left-0 z-ground w-full h-screen rsvp-block">
         <div class="wrapper h-full">
             <div class="col-start-1 col-span-5 flex flex-col item-center justify-center">
                 <h2 class="mb-s4 lg:mb-s max-w-[337px]">
@@ -200,3 +200,16 @@
     
 
 </script>
+
+<style>
+
+    @media (max-width: 1024px) {
+        .rsvp-block {
+            background-image: url('../../public/static/images/image04.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+    }
+</style>

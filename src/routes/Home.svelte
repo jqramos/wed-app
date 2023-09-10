@@ -80,7 +80,7 @@
 
     // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
       document.addEventListener("touchstart", e => {
-        if (scrollTween) {
+        if (scrollTween || window.innerHeight < window.outerHeight) {
           e.preventDefault();
           e.stopImmediatePropagation();
         }
