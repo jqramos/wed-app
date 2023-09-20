@@ -73,7 +73,7 @@
             observer.enable();
             observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
           },
-          duration: 2,
+          duration: 1,
           onComplete: () => {
             scrollTween = null
 

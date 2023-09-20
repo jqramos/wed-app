@@ -25,6 +25,7 @@
                                     {fetchResetOnBlur}
                                     bind:value={guests}
                                     valueAsObject
+                                    i18n={myI18n}
                                     on:change={(e) => {
                                 eligiblePlusOne(e);
                                 }}
@@ -127,6 +128,9 @@
 
     $: guestPlusOne;
 
+    const myI18n = {
+        fetchQuery: minQuery => `Type ${minQuery > 1 ? `at least ${minQuery} letters of your surname ` : '' }to search`,
+    }
 
     onMount(async () => {
         guestPlusOne =0;
