@@ -10,6 +10,16 @@
     import { ScrollTrigger } from "gsap/ScrollTrigger.js";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
+    let isKeyboardOpen = false;
+
+    window.addEventListener('resize', () => {
+      if(document?.activeElement?.tagName === 'INPUT' || document?.activeElement?.attributes === 'text') {
+        isKeyboardOpen = true;
+      } else {
+        isKeyboardOpen = false;
+      }
+    });
+
     window.addEventListener("load", () => {
       //register plugins
       gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -22,9 +32,10 @@
           observer = ScrollTrigger.normalizeScroll(true),
           scrollTween;
 
+
       function goToSection(i) {
         scrollTween = gsap.to(window, {
-          scrollTo: {y: i * innerHeight, autoKill: false},
+          scrollTo: {y: i * innerHeight, autoKill: true},
           onStart: () => {
             observer.enable();
             observer.disable();
@@ -52,10 +63,13 @@
       panels.forEach((panel, i) => {
         ScrollTrigger.create({
           trigger: panel,
-          start: "top top+=100px",
+          start: "top bottom",
           end: "+=199%",
-          preventOverlaps: true,
           onToggle: self => {
+            if (isKeyboardOpen) {
+              return;
+            }
+            //stop the scrollTrigger from toggling the class when we scroll back up
             if (self.isActive && !scrollTween) {
               goToSection(i)
               setActiveDot(dots[i], i)
@@ -75,7 +89,6 @@
       ScrollTrigger.create({
         start: 0,
         end: "max",
-        preventOverlaps: true,
         snap: 1 / (panels.length - 1)
       })
 
