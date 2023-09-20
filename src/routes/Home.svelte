@@ -10,16 +10,6 @@
     import { ScrollTrigger } from "gsap/ScrollTrigger.js";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
-    let isKeyboardOpen = false;
-
-    window.addEventListener('resize', () => {
-      if(document?.activeElement?.tagName === 'INPUT' || document?.activeElement?.attributes === 'text') {
-        isKeyboardOpen = true;
-      } else {
-        isKeyboardOpen = false;
-      }
-    });
-
     window.addEventListener("load", () => {
       //register plugins
       gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -31,14 +21,19 @@
       let panels = gsap.utils.toArray(".js-panel"),
           observer = ScrollTrigger.normalizeScroll(true),
           scrollTween;
+      const isAndroid = /Android/i.test(navigator.userAgent);
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+      observer.disable()
+
 
 
       function goToSection(i) {
         scrollTween = gsap.to(window, {
-          scrollTo: {y: i * innerHeight, autoKill: true},
+          scrollTo: {y: i * innerHeight, autoKill: false},
           onStart: () => {
             observer.enable();
-            observer.disable();
+            observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
           },
           duration: 1,
           onComplete: () => {
@@ -49,6 +44,7 @@
             } else {
               (header as HTMLElement).style.opacity = '1';
             }
+
           },
           overwrite: true
         });
@@ -61,21 +57,17 @@
       }
 
       panels.forEach((panel, i) => {
-        ScrollTrigger.create({
-          trigger: panel,
-          start: "top bottom",
-          end: "+=199%",
-          onToggle: self => {
-            if (isKeyboardOpen) {
-              return;
-            }
-            //stop the scrollTrigger from toggling the class when we scroll back up
-            if (self.isActive && !scrollTween) {
-              goToSection(i)
-              setActiveDot(dots[i], i)
-            }
-          },
-        });
+          ScrollTrigger.create({
+            trigger: panel,
+            start: "top bottom",
+            end: "+=199%",
+            onToggle: self => {
+              if (self.isActive && !scrollTween) {
+                // goToSection(i)
+                setActiveDot(dots[i], i)
+              }
+            },
+          });
       });
 
       dots.forEach((dot, idx) => {
@@ -92,30 +84,24 @@
         snap: 1 / (panels.length - 1)
       })
 
-      observer.disable();
-
-      // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
+    // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
       document.addEventListener("touchstart", e => {
         if (scrollTween) {
           e.preventDefault();
           e.stopImmediatePropagation();
         }
       }, {capture: true, passive: false})
-
-
-
-
     })
 </script>
 
 <div class="indicator js-indicator fixed bottom-[50%] lg:bottom-[20%] right-[10px] lg:right-[30px] z-above-all flex flex-col gap-s2">
-  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white sticky" data-active="false" aria-label="Go To Hero"></button>
-  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white sticky" data-active="false" aria-label="Go To About"></button>
-  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white sticky" data-active="false" aria-label="Go To Details"></button>
-  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white sticky" data-active="false" aria-label="Go To FAQ"></button>
-  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white sticky" data-active="false" aria-label="Go To Timeline"></button>
-  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white sticky" data-active="false" aria-label="Go To RSVP"></button>
-  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white sticky" data-active="false" aria-label="Go To Footer"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Hero"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To About"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Details"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To FAQ"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Timeline"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To RSVP"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Footer"></button>
 </div>
 
 <Layout components={[Hero, About, Details, FAQ, Timeline, RSVP]} />
