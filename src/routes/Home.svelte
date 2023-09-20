@@ -10,6 +10,8 @@
     import { ScrollTrigger } from "gsap/ScrollTrigger.js";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isMobile = window.innerWidth < 768 || isAndroid;
 
     window.addEventListener("load", () => {
       //register plugins
@@ -22,9 +24,46 @@
       let panels = gsap.utils.toArray(".js-panel"),
           observer = ScrollTrigger.normalizeScroll(true),
           scrollTween;
-      const isAndroid = /Android/i.test(navigator.userAgent);
-      const isMobile = window.matchMedia("(max-width: 768px)").matches;
       observer.disable()
+
+      if(!isMobile) {
+
+        panels.forEach((panel, i) => {
+          ScrollTrigger.create({
+            trigger: panel,
+            start: "top bottom",
+            end: "+=199%",
+            onToggle: self => {
+              if (self.isActive && !scrollTween) {
+                // goToSection(i)
+                setActiveDot(dots[i], i)
+              }
+            },
+          });
+        });
+
+        dots.forEach((dot, idx) => {
+          dot.addEventListener("click", e => {
+            e.preventDefault();
+            setActiveDot(dot, idx);
+          });
+        });
+
+        // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes):
+        ScrollTrigger.create({
+          start: 0,
+          end: "max",
+          snap: 1 / (panels.length - 1)
+        })
+
+        // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
+        document.addEventListener("touchmove", e => {
+          if (scrollTween) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+          }
+        }, {capture: true, passive: false})
+      }
 
       function goToSection(i) {
 
@@ -55,41 +94,6 @@
         goToSection(idx);
       }
 
-      panels.forEach((panel, i) => {
-          ScrollTrigger.create({
-            trigger: panel,
-            start: "top bottom",
-            end: "+=199%",
-            onToggle: self => {
-              if (self.isActive && !scrollTween) {
-                // goToSection(i)
-                setActiveDot(dots[i], i)
-              }
-            },
-          });
-      });
-
-      dots.forEach((dot, idx) => {
-        dot.addEventListener("click", e => {
-          e.preventDefault();
-          setActiveDot(dot, idx);
-        });
-      });
-
-      // just in case the user forces the scroll to an inbetween spot (like a momentum scroll on a Mac that ends AFTER the scrollTo tween finishes):
-      ScrollTrigger.create({
-        start: 0,
-        end: "max",
-        snap: 1 / (panels.length - 1)
-      })
-
-    // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
-      document.addEventListener("touchmove", e => {
-        if (scrollTween) {
-          e.preventDefault();
-          e.stopImmediatePropagation();
-        }
-      }, {capture: true, passive: false})
     })
 </script>
 

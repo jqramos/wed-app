@@ -117,7 +117,6 @@
     const pb = new PocketBase('/');
     import Svelecte from 'svelecte';
     import { onMount } from 'svelte';
-    import { gsap } from 'gsap';
 
     let guests = [];
     let guestPlusOne;
@@ -130,17 +129,8 @@
 
 
     onMount(async () => {
-        document.getElementsByClassName('svelecte')[0].addEventListener('click', onInputClick);
         guestPlusOne =0;
     });
-
-    function onInputClick() {
-        gsap.to('.rsvp-input', {
-            y: -20,
-            duration: 0.5,
-            ease: 'power4.out'
-        });
-    }
 
 
     let resetOnBlur = true;
