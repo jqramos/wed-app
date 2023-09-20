@@ -24,10 +24,7 @@
           scrollTween;
       const isAndroid = /Android/i.test(navigator.userAgent);
       const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
       observer.disable()
-
-
 
       function goToSection(i) {
 
@@ -40,7 +37,7 @@
           duration: 2,
           onComplete: () => {
             scrollTween = null
-            
+
             if (i === 0) {
               (header as HTMLElement).style.opacity = '0';
             } else {
@@ -87,7 +84,7 @@
       })
 
     // on touch devices, ignore touchstart events if there's an in-progress tween so that touch-scrolling doesn't interrupt and make it wonky
-      document.addEventListener("touchstart", e => {
+      document.addEventListener("touchmove", e => {
         if (scrollTween) {
           e.preventDefault();
           e.stopImmediatePropagation();
