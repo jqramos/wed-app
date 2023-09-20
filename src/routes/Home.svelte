@@ -10,6 +10,7 @@
     import { ScrollTrigger } from "gsap/ScrollTrigger.js";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 
+
     window.addEventListener("load", () => {
       //register plugins
       gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -29,13 +30,14 @@
 
 
       function goToSection(i) {
+
         scrollTween = gsap.to(window, {
           scrollTo: {y: i * innerHeight, autoKill: false},
           onStart: () => {
             observer.enable();
             observer.disable(); // for touch devices, as soon as we start forcing scroll it should stop any current touch-scrolling, so we just disable() and enable() the normalizeScroll observer
           },
-          duration: 1,
+          duration: 2,
           onComplete: () => {
             scrollTween = null
             

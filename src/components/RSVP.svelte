@@ -4,7 +4,7 @@
         <source srcset="/static/images/image04.jpg" type="image/jpeg">
         <img class="h-screen w-full object-cover object-right max-w-[50%] ml-auto" src="/static/images/image04.jpg" alt="">
     </picture>
-    <div class="lg:absolute lg:top-0 lg:left-0 z-ground w-full h-screen rsvp-block">
+    <div class="absolute lg:top-0 lg:left-0 z-ground w-full h-screen rsvp-block">
         <div class="wrapper h-full">
             <div class="col-start-1 col-span-5 flex flex-col item-center justify-center">
                 <h2 class="mb-s4 lg:mb-s max-w-[337px]">
@@ -35,7 +35,8 @@
                                     return records;
                                 }}
                                     labelField="guest_name"
-                                    class="w-full"
+                                    class="w-full rsvp-input"
+                                    id="rsvp-input"
                             ></Svelecte>
                         {/if}
 
@@ -101,11 +102,13 @@
                             </span>
                         {/if}
                     </div>
-            </div>
+                </div>
             {/if}
+            </div>
         </div>
     </div>
 </section>
+
 
 <script lang="ts">
     import {  fade  } from 'svelte/transition';
@@ -114,23 +117,35 @@
     const pb = new PocketBase('/');
     import Svelecte from 'svelecte';
     import { onMount } from 'svelte';
+    import { gsap } from 'gsap';
+
     let guests = [];
     let guestPlusOne;
     let selectedGuest = "";
     let isGoing = false;
-    let isSubmitted = false;
-  
-    //make guestPlusOne reactive
+    let isSubmitted = false
+
+
     $: guestPlusOne;
-  
+
+
     onMount(async () => {
+        document.getElementsByClassName('svelecte')[0].addEventListener('click', onInputClick);
         guestPlusOne =0;
     });
-  
-  
+
+    function onInputClick() {
+        gsap.to('.rsvp-input', {
+            y: -20,
+            duration: 0.5,
+            ease: 'power4.out'
+        });
+    }
+
+
     let resetOnBlur = true;
     let fetchResetOnBlur = true;
-    
+
     //call api once on load
     async function searchRecords(search) {
         // list and filter "example" collection records
@@ -140,8 +155,8 @@
       });
       return records.items;
     }
-  
-    function eligiblePlusOne(e) {   
+
+    function eligiblePlusOne(e) {
       selectedGuest = e.detail;
       //if null set isGoing to false
       if (selectedGuest == null) {
@@ -151,15 +166,15 @@
       }
       guestPlusOne = selectedGuest?.guest_no ? selectedGuest?.guest_no : 0;
     }
-  
-  
+
+
     async function submit() {
       let guestNames = [];
       for (let i = 0; i < guestPlusOne; i++) {
         const name = document.getElementById(`grid-guests-name-${i}`).value;
         guestNames.push(name);
       }
-  
+
       //create object to be sent to api
       const data = {
         guest_name: selectedGuest?.guest_name,
@@ -170,20 +185,20 @@
       const record = sendData(data);
       return record;
     }
-  
-  
+
+
     async function sendData(data) {
       isSubmitted = true;
       return await pb.collection('guests').update(selectedGuest?.id, data);
     }
-  
+
     async function sendNo() {
       isGoing = false;
       const data = {
         guest_name: selectedGuest?.guest_name,
         response: "No"
       }
-  
+
       //call api
       const record = sendData(data);
       return record;
@@ -197,7 +212,7 @@
             submit();
         }
     }
-    
+
 
 </script>
 
@@ -209,6 +224,8 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+        /*    opacity down*/
+            opacity: 0.8;
         }
 
     }

@@ -14,6 +14,10 @@
   background-color: var(--primary-700);
 }
 
+body {
+  position: relative;
+}
+
 .svelecte .sv-control,
 .guest-field {
   background-color: var(--neutral-700) !important;
