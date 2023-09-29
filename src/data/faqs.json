@@ -1,7 +1,7 @@
 [
   {
     "question": "What time should I arrive?",
-    "answer": "We encourage you to arrive at 3:00-3:30 PM to give you time to settle down and find your seats before the processional starts at 4:00 pm."
+    "answer": "We encourage you to arrive at 3:30 PM to give you time to settle down and find your seats before the processional starts at 4:00 pm."
   },
   {
     "question": "Can we take pictures and videos during the wedding ceremony?",
@@ -26,6 +26,14 @@
   {
     "question": "If I RSVP “YES” but my schedule suddenly changes, What should I do?",
     "answer": "We would love to have you at our wedding, but we understand that some things are beyond our control. Please let us know right away so we can adjust the reallocation of seats."
+  },
+  {
+    "question": "What should I wear?",
+    "list": "Men are encouraged to wear long/short sleeve polo, formal pants and dress shoes. Women may wear knee length formal dress or pantsuit with heels or doll shoes. STRICTLY no denim, tshirt, sneakers and slipper."
+  },
+  {
+    "question": "What's the color motif?",
+    "list": "We would love to see you in any shade of green, preferably sage, moss, olive, pastel or thyme. Please avoid wearing white and reserve this color for the bride."
   },
   {
     "question": "Do you have a gift preference?",

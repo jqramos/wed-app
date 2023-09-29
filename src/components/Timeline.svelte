@@ -21,7 +21,7 @@
                 </h2>
                 <div class="timeline overflow-x-scroll lg:overflow-hidden touch-auto relative before:rounded before:min-w-[1126px] before:absolute before:top-[50%] before:left-0 before:h-[2px] before:w-full before:bg-white">
                     <div class="timeline-item min-w-[140px] relative before:rounded before:absolute before:-bottom-[2px] before:left-[50%] before:h-[20px] before:w-[2px] before:bg-white">
-                        <Icon iconName={icon1} iconCaption="church call time" iconTime="3:30 PM"/>
+                        <Icon iconName={icon1} iconCaption="call time" iconTime="3:30 PM"/>
                     </div>
                     <div class="timeline-item min-w-[140px] relative before:rounded before:absolute before:top-[2px] before:left-[50%] before:h-[20px] before:w-[2px] before:bg-white">
                         <Icon iconName={icon2} iconCaption="wedding ceremony" iconTime="4:00 PM"/>
