@@ -1,25 +1,52 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { register } from 'swiper/element/bundle';
-    register();
     import faqItems from '../data/faqs.json';
+
+    register();
     let swiperBg, swiperContent;
 
+    const imageList = [
+        'carousel-1.jpg',
+        'carousel-3.jpg',
+        'carousel-4.webp',
+        'carousel-5.webp',
+        'carousel-6.webp',
+        'carousel-7.webp',
+        'carousel-8.webp',
+        'carousel-9.webp',
+        'carousel-10.webp',
+        'carousel-11.webp',
+        'carousel-12.webp',
+        'carousel-13.webp',
+        'carousel-14.webp',
+        'carousel-15.webp',
+        'carousel-16.webp',
+        'carousel-17.webp',
+        'carousel-18.webp'
+    ]
 
-    const slideNext = () => {
-        swiperBg.swiper.slideNext();
-        swiperContent.swiper.slideNext();
-    };
 
-    const slidePrev = () => {
-        swiperBg.swiper.slidePrev();
-        swiperContent.swiper.slidePrev();
-    };
 
     onMount(() => {
         swiperBg = document.querySelector('.faq-bg');
         swiperContent = document.querySelector('.faq-content');
+        swiperBg.swiper.update();
     });
+
+    function slideNext() {
+        swiperBg.swiper.slideNext();
+        swiperContent.swiper.slideNext();
+    };
+
+    function slidePrev() {
+        swiperBg.swiper.slidePrev();
+        swiperContent.swiper.slidePrev();
+    };
+
+    function getFontSize(item) {
+        return item?.fontsize ? `[${item?.fontsize}]` : 'p1';
+    }
     
 
 </script>
@@ -31,24 +58,14 @@
             pagination={false}
             loop={true}
     >
-        <swiper-slide>
-            <picture>
-                <source srcset="/static/images/carousel-1.jpg" type="image/jpeg">
-                <img class="faq-bg-image" src="/static/images/carousel-1.jpg" alt="">
-            </picture>
-        </swiper-slide>
-        <swiper-slide>
-            <picture>
-            <source srcset="/static/images/carousel-2.jpg" type="image/jpeg">
-            <img class="faq-bg-image" src="/static/images/carousel-2.jpg" alt="">
-        </picture>
-        </swiper-slide>
-        <swiper-slide>
-            <picture>
-                <source srcset="/static/images/carousel-3.jpg" type="image/jpeg">
-                <img class="faq-bg-image" src="/static/images/carousel-3.jpg" alt="">
-            </picture>
-        </swiper-slide>
+        {#each imageList as image}
+            <swiper-slide>
+                <picture>
+                    <source srcset="/static/images/{image}">
+                    <img class="faq-bg-image" src="/static/images/image}" alt="">
+                </picture>
+            </swiper-slide>
+        {/each}
     </swiper-container>
     <div class="absolute h-full w-full inset-0 z-above-ground2">
         <div class="wrapper h-full">
@@ -72,7 +89,7 @@
                                             <p class="text-base md:text-p1 font-light justify-center">{item?.answer}</p>
                                         {/if}
                                         {#if item?.list}
-                                            <ul class="list-disc list-inside text-base md:text-p1 font-light justify-center">
+                                            <ul class="list-disc list-inside text-base font-light justify-center md:text-{getFontSize(item)}">
                                                 {#each item.list as list}
                                                     <li>{list}</li>
                                                 {/each}
@@ -82,7 +99,7 @@
                                 </swiper-slide>
                             {/each}
                         </swiper-container>
-                        <div className="mt-s2">
+                        <div class="mt-s2">
                             <button class="swiper-button-prev italic hover:text-primary-300" on:click={() => slidePrev()} >prev</button>
                             <span>/</span>
                             <button class="swiper-button-next italic hover:text-primary-300" on:click={() => slideNext()} >next</button>

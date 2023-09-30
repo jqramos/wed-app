@@ -19,6 +19,11 @@
                     <span class="font-serif text-p2 md:text-h4 my-s1 block text-primary-400 uppercase">ALTA VERANDA DE TIBIG, Silang Cavite</span>
                     Reception to follow in the same venue which starts at 6 O’clock in the evening.
                 </p>
+
+                <div class="mt-s4 text-center">
+<!--                    download E-invitation here -->
+                    <a target="_blank" href="https://storage.cloud.google.com/craim/E-Invitation%20-%20Jayvee%20%26%20VIctoria.pdf" class="btn btn-primary btn-lg text-2xl underline">Download E-invitation</a>
+                </div>
             </div>
         </div>
     </div>

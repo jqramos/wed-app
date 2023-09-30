@@ -5,7 +5,7 @@
   },
   {
     "question": "Can we take pictures and videos during the wedding ceremony?",
-    "answer": "Our Ceremony will be unplugged and solemn. Please turn off and keep your phones during the processional and ceremony. You may take photos after we have been pronounced husband and wife. We have an incredible team of photographers and videographers on hand to capture the moment. We promise to share the photos with you after the wedding."
+    "answer": "Our Ceremony will be unplugged and solemn. Please turn off and keep your phones during the processional and ceremony. You may take photos after we have been pronounced husband and wife. We have a team of professionals on hand to capture the moment. We promise to share the photos with you after the wedding."
   },
   {
     "question": "Can I bring someone with me? (Plus one, date, driver, etc.)",
@@ -44,11 +44,12 @@
     "answer": "Please don’t. You’ll be seated along with your family or friends. It took a lot of effort and discussion to complete the seating arrangement that is designed to everyone’s comfort and network preference."
   },
   {
-    "question": "Who do we get in touch with if you are unable to contact you on our wedding day?",
+    "question": "Who should we contact on your wedding day?",
     "answer": "Please understand that we may not be able to respond to you during the day because we wil be busy preparing. If there are urgent concerns, you may contact the following",
     "list": [
-      "Our coordinator:", "Maid of Honor: Janica Chioco", "Maid of Honor: Mae Ann Cayabyab", "Best Man: Gemerson Bagtas"
-    ]
+      "Our coordinator: Glenda de Leon (0965) 600 5288", "Maid of Honor: Janica Chioco (0939) 888 5913", "Maid of Honor: Mae Ann Cayabyab (0995) 470 5125", "Best Man: Gemerson Bagtas (0917) 737 90394"
+    ],
+    "fontsize": "17px"
   },
   {
     "question": "Where can we park our cars and how much will it cost?",
