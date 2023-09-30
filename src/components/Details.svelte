@@ -22,7 +22,7 @@
 
                 <div class="mt-s4 text-center">
 <!--                    download E-invitation here -->
-                    <a target="_blank" href="https://storage.cloud.google.com/craim/E-Invitation%20-%20Jayvee%20%26%20VIctoria.pdf" class="btn btn-primary btn-lg text-2xl underline">Download E-invitation</a>
+                    <a target="_blank" href="https://storage.googleapis.com/craim/E-Invitation%20-%20Jayvee%20%26%20VIctoria.pdf" class="btn btn-primary btn-lg text-2xl underline">Download E-invitation</a>
                 </div>
             </div>
         </div>

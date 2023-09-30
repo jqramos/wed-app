@@ -25,6 +25,8 @@
           <li class="pb-s1 text-base lg:text-p1">Jayvee asks Victoria to be her official girlfriend after eating her "Sinigang" meal</li>
           <li class="pb-s1 text-base lg:text-p1">Both are good in Math during their academic years</li>
         </ul>
+
+        <a href="https://www.facebook.com/media/set/?set=a.699825762165385&type=3" target="_blank" class="mt-5 text-base lg:text-p1 text-primary-600 font-semibold">Click here to see more of our prenup photos</a>
         <button class="fixed top-s2 right-s2 text-base uppercase" on:click={closeModal}>Close</button>
       </div>
     </div>

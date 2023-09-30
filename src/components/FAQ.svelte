@@ -8,7 +8,8 @@
 
     const imageList = [
         'carousel-1.jpg',
-        'carousel-3.jpg',
+        'carousel-2.webp',
+        'carousel-3.webp',
         'carousel-4.webp',
         'carousel-5.webp',
         'carousel-6.webp',
@@ -20,10 +21,7 @@
         'carousel-12.webp',
         'carousel-13.webp',
         'carousel-14.webp',
-        'carousel-15.webp',
-        'carousel-16.webp',
-        'carousel-17.webp',
-        'carousel-18.webp'
+        'carousel-15.jpg',
     ]
 
 
@@ -61,8 +59,8 @@
         {#each imageList as image}
             <swiper-slide>
                 <picture>
-                    <source srcset="/static/images/{image}">
-                    <img class="faq-bg-image" src="/static/images/image}" alt="">
+                    <source srcset="https://storage.googleapis.com/craim/wed/{image}">
+                    <img class="faq-bg-image" src="/https://storage.googleapis.com/craim/wed/{image}" alt="">
                 </picture>
             </swiper-slide>
         {/each}
