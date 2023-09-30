@@ -31,9 +31,6 @@
           <span class="text-base lg:text-p1 text-primary-600 font-semibold">Click here to see more of our prenup photos</span>
           <ul class="list-square">
             <li class="pb-s1 text-base lg:text-p1">
-              <a href="https://www.facebook.com/media/set/?vanity=armidiaphoto&set=a.810783060438155" target="_blank" class="mt-5 text-base lg:text-p1 text-primary-600 font-semibold underline">Jayvee and Victoria | Pre-wedding photos</a>
-            </li>
-            <li class="pb-s1 text-base lg:text-p1">
               <a href="https://www.facebook.com/media/set/?set=a.690742099740418&type=3" target="_blank" class="mt-5 text-base lg:text-p1 text-primary-600 font-semibold underline">Jayvee & Victoria | Engagement Session</a>
             </li>
             <li class="pb-s1 text-base lg:text-p1">

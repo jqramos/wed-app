@@ -63,7 +63,7 @@ body {
 /*at sm screen  size*/
 @media (max-width: 640px) {
   .faq-bg-image {
-    object-position: -19cm 0;
+    object-position: -79vh 0;
   }
 
   .hero-bg-img {
