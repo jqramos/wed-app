@@ -10,7 +10,7 @@
   </script>
 
 
-<header class="js-header opacity-0 fixed w-full z-navigation py-s2 lg:py-s5 before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient5 transition-opacity duration-500 delay-75">
+<header class="js-header md:max-2xl:opacity-0 sm:opacity-1 fixed w-full z-navigation py-s2 lg:py-s5 before:absolute before:inset-0 before:h-full before:w-full before:bg-gradient5 md:max-2xl:transition-opacity md:max-2xl:duration-500 md:max-2xl:delay-75">
     <div class="wrapper">
         <div class="relative col-span-2">
             <Logo className="max-w-[50px] lg:max-w-[70px] h-auto" />
