@@ -15,7 +15,7 @@
                 <p class="text-base md:text-p1">
                     You are invited to share our joys as we exchange marriage vows and begin our new life together on
                     <span class="font-serif text-p2 md:text-h4 my-s1 block text-primary-400 uppercase">November 24, 2023</span>
-                    Thursday, at 4 O’clock in the afternoon at
+                    Friday, at 3:30 in the afternoon at
                     <span class="font-serif text-p2 md:text-h4 my-s1 block text-primary-400 uppercase">ALTA VERANDA DE TIBIG, Silang Cavite</span>
                     Reception to follow in the same venue which starts at 6 O’clock in the evening.
                 </p>
