@@ -66,6 +66,10 @@ body {
     object-position: -79vh 0;
   }
 
+  .indicator {
+    display: none;
+  }
+
   .hero-bg-img {
     object-position: 63% 0;
   }

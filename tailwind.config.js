@@ -12,6 +12,7 @@ export default {
       },
       screens: {
         sm: "320px",
+        smd: "640px",
         md: "768px",
         lg: "1024px",
         xl: "1440px",
@@ -70,7 +71,7 @@ export default {
         "grey-800": "#1e1d1d",
         "grey-900": "#171616",
 
-        "grey-rgba-700": "rgba(39, 37, 37, 0.7)",
+        "grey-rgba": "rgba(39, 37, 37)",
       },
       fontSize: {
         eyebrow: ["12px", "16.8px"],

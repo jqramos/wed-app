@@ -68,7 +68,7 @@
     <div class="absolute h-full w-full inset-0 z-above-ground2">
         <div class="wrapper h-full">
             <div class="col-span-full lg:col-span-7 flex items-center">
-                <div class="px-s2 lg:px-s5 py-s8 bg-grey-rgba-700 lg:max-w-[570px] sm:max-w-full">
+                <div class="px-s2 lg:px-s5 py-s8 smd:bg-grey-rgba/70 bg-grey-rgba/90   lg:max-w-[570px] sm:max-w-full">
                     <h2 class="mb-s4 lg:mb-s">
                         <span class="font-serif text-h3 md:text-h2 uppercase">Frequently</span>
                         <span class="block font-sans text-p2 md:text-h3 text-right text-primary-300 font-light italic -translate-y-[20px] lg:-translate-y-[30px]">asked questions</span>

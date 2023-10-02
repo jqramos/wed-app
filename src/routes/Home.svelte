@@ -6,6 +6,7 @@
     import Details from '../components/Details.svelte';
     import Timeline from '../components/Timeline.svelte';
     import RSVP from '../components/RSVP.svelte';
+    import Video from '../components/Video.svelte';
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger.js";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
@@ -101,10 +102,11 @@
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Hero"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To About"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Details"></button>
+  <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Video"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To FAQ"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Timeline"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To RSVP"></button>
   <button class="dot js-dot h-[10px] w-[10px] rounded-full bg-white" data-active="false" aria-label="Go To Footer"></button>
 </div>
 
-<Layout components={[Hero, About, Details, FAQ, Timeline, RSVP]} />
+<Layout components={[Hero, About, Details, Video, FAQ, Timeline, RSVP]} />
