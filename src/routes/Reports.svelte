@@ -9,6 +9,7 @@
                         <th scope="col" class="px-6 py-4 ">Guest Name</th>
                         <th scope="col" class="px-6 py-4">Role</th>
                         <th scope="col" class="px-6 py-4">Added Guest</th>
+                        <th scope="col" class="px-6 py-4">Response</th>
                     </tr>
                     </thead>
                     <tbody class="bg-white">
@@ -20,6 +21,7 @@
                                 <td className="whitespace-nowrap px-6 py-4 font-medium">{item.guest_name}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{item.role}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{item.added_guest ? countAddedGuests(item.added_guest) : '-'}</td>
+                                <td className="whitespace-nowrap px-6 py-4">{item.response}</td>
                             </tr>
                         {/each}
                     {:catch error}
@@ -69,6 +71,11 @@
         items.filter((item) => {
             if (item.response === 'Yes') {
                 totalYesResponses ++;
+                item.added_guest.map((guest) => {
+                    if (guest?.trim()?.length > 0) {
+                        totalYesResponses ++;
+                    }
+                });
             }
         });
     }
