@@ -71,7 +71,7 @@
         items.filter((item) => {
             if (item.response === 'Yes') {
                 totalYesResponses ++;
-                item.added_guest.map((guest) => {
+                item?.added_guest.map((guest) => {
                     if (guest?.trim()?.length > 0) {
                         totalYesResponses ++;
                     }
